@@ -1,0 +1,20 @@
+#header {
+    background: $header-color-dark;
+    color: $light-color;
+
+    a {
+        color: rgba($light-color, 0.7) !important;
+    }
+
+    a.active {
+        color: $light-color !important;
+    }
+
+    .dropmenu ul ul a {
+        color: $dark-color !important;
+    }
+
+    .logo svg path {
+        fill: $light-color;
+    }
+}

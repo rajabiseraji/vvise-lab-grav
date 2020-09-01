@@ -3,10 +3,11 @@ production-mode: true
 grid-size: grid-lg
 header-fixed: true
 header-animated: true
-header-dark: false
+header-dark: true
 header-transparent: false
 sticky-footer: true
 blog-page: '/blog'
+custom_logo: [{name: 'logo.webp'}]
 spectre:
   exp: false
   icons: false
