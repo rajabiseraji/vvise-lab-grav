@@ -80,6 +80,9 @@
                 <section class="banner-container">
                     {% block banner %}{% endblock %}
                 </section>
+                <pre>
+                    {{ dump(page.header) }}
+                </pre>
                 <section class="container {{ grid_size }}"> 
                     {% block logos %}
                         {% include "partials/logo-section.html.twig" ignore missing %}
