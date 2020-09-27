@@ -1,0 +1,14 @@
+{% set logos = theme_var('logos') %}
+<pre>
+    {{ dump(logos) }}
+</pre>
+<div id="logo-content" class="float-right">
+    {% for logo in logos %}
+        {% if logo %}
+            {% set logo_file = logo.name %}
+            <img class="body-logo" src="{{ url('theme://images/' ~ logo_file) }}" alt="{{ logo.name }}"/>
+        {% else %}
+            no logo :(
+        {% endif %}
+    {% endfor %}
+</div>

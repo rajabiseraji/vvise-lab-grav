@@ -3,7 +3,7 @@
 <div id="banner-content">
     {% if banner %}
         {% set banner_file = (banner|first).name %}
-    <img src="{{ url('theme://images/' ~ banner_file) }}" alt="{{ site.title }}"/>
+        <img src="{{ url('theme://images/' ~ banner_file) }}" alt="{{ site.title }}"/>
     {% else %}
         {# {% include('@images/banner.') %} #}
         No banner! 

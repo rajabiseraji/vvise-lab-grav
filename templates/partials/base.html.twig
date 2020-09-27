@@ -81,7 +81,9 @@
                     {% block banner %}{% endblock %}
                 </section>
                 <section class="container {{ grid_size }}"> 
-
+                    {% block logos %}
+                        {% include "partials/logo-section.html.twig" ignore missing %}
+                    {% endblock %}
                     {% block messages %}
                         {% include 'partials/messages.html.twig' ignore missing %}
                     {% endblock %}

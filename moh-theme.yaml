@@ -9,6 +9,7 @@ sticky-footer: true
 blog-page: '/blog'
 custom_logo: [{name: 'logo.webp'}]
 custom_banner: [{name: 'banner.webp'}]
+logos: [{name: 'sfu.png'}, {name: 'siat.png'}]
 spectre:
   exp: false
   icons: false
