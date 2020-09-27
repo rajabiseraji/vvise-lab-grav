@@ -21,3 +21,21 @@
     
 }
 
+
+#banner-content {
+    .banner-text {
+        position: absolute;
+        top: $header-height-large;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            color: whitesmoke;
+            font-weight: 100;
+        }
+    }
+}
