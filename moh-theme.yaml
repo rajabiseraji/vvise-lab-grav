@@ -8,6 +8,7 @@ header-transparent: false
 sticky-footer: true
 blog-page: '/blog'
 custom_logo: [{name: 'logo.webp'}]
+custom_banner: [{name: 'banner.webp'}]
 spectre:
   exp: false
   icons: false

@@ -1,5 +1,9 @@
 {% extends 'partials/base.html.twig' %}
 
+{% block banner %}
+    {% include "partials/banner.html.twig" ignore missing %}
+{% endblock %}
+
 {% block content %}
     {{ page.content|raw }}
 {% endblock %}

@@ -8,7 +8,7 @@
 {% block head deferred %}
     <meta charset="utf-8" />
     <title>{% if page.title %}{{ page.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
-
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% include 'partials/metadata.html.twig' %}
@@ -52,6 +52,7 @@
                         {% block header_navigation %}
                             {% include 'partials/navigation.html.twig' %}
                         {% endblock %}
+                        
                         </nav>
 
                         {% if config.plugins.login.enabled and grav.user.username %}
@@ -75,8 +76,12 @@
 
         <section id="start">
         {% block body %}
-            <section id="body-wrapper" class="section">
+            <section id="body-wrapper"> {# class="section" for left abnd right spacing #}
+                <section class="banner-container">
+                    {% block banner %}{% endblock %}
+                </section>
                 <section class="container {{ grid_size }}"> 
+
                     {% block messages %}
                         {% include 'partials/messages.html.twig' ignore missing %}
                     {% endblock %}
