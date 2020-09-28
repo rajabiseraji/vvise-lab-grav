@@ -279,6 +279,10 @@ section#news {
 .interactive-systems-container {
     @extend .research-container;
 
+    .main-img {
+        width: 100%;
+    }
+
     .container {
         padding-top: 0 !important;
     }
@@ -298,7 +302,7 @@ section#news {
         font-weight: 600;
         font-family: inherit;
         margin-top: 0;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.75rem;
     }
     
     .content-text {
@@ -329,4 +333,11 @@ section#news {
     }
 
 
+}
+
+// 3D UI Page
+.user-interfaces {
+    .main-img {
+        height: 260px;
+    }
 }

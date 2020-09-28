@@ -1,0 +1,86 @@
+{% extends 'interactive-systems.html.twig' %}
+{% set top_image = 'lights3d.webp' %}
+
+{% block mainimg %}
+	<img class="main-img" src="{{ url('theme://images/lights3d.webp') }}"/>
+{% endblock %}
+
+{% block pagecontent %}
+    <section class="columns">
+        <div class="left-column col-6">
+            <h2 class="content-title">
+                General 3D User Interfaces
+            </h2>
+            <p class="content-text">
+                One of the problems of VR systems is that 3D input devices are still in their infancy. Even more importantly, the software technologies that map the raw user movements to 3D object manipulation are also immature. Comparing the performance of intelligent algorithms for 3D manipulation in a desktop environment with a mouse with "traditional" VR manipulation techniques using 3D trackers illustrates this best. For many common tasks the desktop system with the mouse excels. This work assembles a list of guidelines for 3D manipulation. Each of the guidelines is targeted at making 3D and VR systems easier to use and is based on previous research or evaluative studies. The most recent work identifies input devices, such as the air pen, which work well for 3D manipulation.
+            </p>
+        </div>
+        <div class="right-column col-6">
+            <h2 class="content-title">
+                3D Pointing
+            </h2>
+            <p class="content-text">
+                Common 2D input devices, such as the mouse, outperform most 3D input devices on frequently used tasks in 3D environments. This seems counterintuitive at first. One aspect of the problem is that simultaneous control of three degrees of freedom is more difficult for humans compared to just two degrees of freedom. Hence, most successful systems use 3D input only rarely, see e.g. the work on Guidelines for 3D User Interfaces, mentioned below. The other aspect pertains to differences in 2D and 3D input technologies. Examples for differences include variations in latency, jitter, the effect of co-location of input and output, as well as the existence of a supporting surface. To investigate this, we have performed a series of experiments that explore and document the effects of each factor
+            </p>
+        </div>
+    </section>
+    <section class="columns with-top-space user-interfaces">
+        <div class="left-column col-6">
+            <img class="main-img" src="{{ url('theme://images/jo.webp') }}"/>
+        </div>
+        <div class="right-column col-6">
+            <img class="main-img" src="{{ url('theme://images/manipulation.webp') }}"/>
+        </div>
+    </section>
+    <section class="columns with-top-space">
+        <div class="left-column col-6">
+            <h2 class="content-title">
+                Mid-air Pointing
+            </h2>
+            <p class="content-text">
+                M. Brown, HitTheWall,
+                TouchTheWall
+            </p>
+            <h2 class="content-title">
+                3D Positioning
+            </h2>
+            <p class="content-text">
+                M. Brown, HitTheWall,
+                TouchTheWall
+            </p>
+            <h2 class="content-title">
+                3D Navigation
+            </h2>
+            <p class="content-text">
+                M. Brown, HitTheWall,
+                TouchTheWall
+            </p>
+        </div>
+        <div class="right-column col-6">
+            <h2 class="content-title">
+                3D Manipulation
+            </h2>
+            <p class="content-text">
+                The SLIDE system builds on the work in the SESAME system and realizes novel interaction techniques for 3D manipulation with 2D input devices, such as a mouse or multi-touch tabletop system. Slide includes new methods for 3D rotations, as well as a new method for quickly disambiguating 3D positions in perspective viewing. It also includes known methods for quick 3D navigation and 3D selection. Moreover, the system also supports common VR input devices such as Nintendo WiiMotes and Balanceboards. Recent results were submitted to the IEEE 3DUI Contest 2011.
+                <br>
+                Among all contest entries, this system featured the fastest completion times for the virtual 3D puzzle, for both novices and experts. In the same year, we ported Slide onto MULTI, used its multi-touch abilities, and enabled 3D Manipulation, see this video.
+                <br>
+                Vuibert
+            </p>
+        </div>
+    </section>
+    <h2 class="content-title">
+        3D Modeling (CAD, VR, AR, &amp Sketching)
+    </h2>
+    <p class="content-text">
+        This project explored new ways to modify fractal terrains.
+        <br> MIVE: The creation of object models for computer graphics applications, such as interior design or the generation of animations is a labor-intensive process. Today's computer aided design (CAD) programs address the problem of creating single geometric object models quite well. But almost all users find common tasks, such as quickly furnishing a room, hard to accomplish. This project investigates 3D interaction techniques that are easy to use, yet allow users to quickly construct 3D environments. The user interface is evaluated with user tests. The results indicate that users take less than half the time with the new system. Individual publications focus on the following issues: object group interaction techniques, a detailled evaluation of the interaction techniques, an evaluation with complex tasks (scene creation & modification), details of how constraints work in the MIVE system and discusses also the automatic creation of constraints, an evaluation of the semantic constraints. an attempt to integrate an intelligent assistant, the first implementation of semantic constraints.
+        <br>
+        Lego blocks are a simple way to create 3D shapes. The Virtual Lego system introduces simple techniques to quickly create and manipulate Lego models. User studies showed that users without any 3D experience could quickly create 3D content with this system. You can also download a demo version of the Lego system. A user study of a haptics version of Lego has yielded interesting results.
+ 
+        <br>
+        This project investigates a new conceptual design system. The main goal of is to enable even naive users to quickly create and modify 3D content to         communicate design ideas. SESAME (Sketch, Extrude, Sculpt, and Manipulate Easily) systems is based on the solid modeling paradigm and requires only a 2D        pointing device. User studies have shown that naive users can quickly learn to use this system to generate interesting content. A comparison of SESAME      with sketching on paper showed no significant differences in terms of creativity, but a comparison with a user group familiar with standard CAD tools    clearly shows that SESAME encourages more creativity than current tools. A demo version of the SESAME system is also available.
+    </p>
+
+{% endblock %}
+
