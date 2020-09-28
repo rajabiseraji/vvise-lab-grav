@@ -47,6 +47,10 @@ body, html {
 }
 
 #start {
+    height: 100%;
+}
+
+.parallax-container {
     background-image: url('../images/banner.webp');
     padding-bottom: 15rem;
     height: 100%;

@@ -174,3 +174,23 @@ section#news {
     }
 }
 
+
+
+// Research Container
+.research-container {
+    height: 100%;
+
+    .container {
+        padding-top: 0;
+    }
+
+    .intro-text {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .intro-title {
+        padding: 1rem 0 1rem;
+    }
+}
+
