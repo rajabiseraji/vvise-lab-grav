@@ -1,4 +1,4 @@
-{% extends 'partials/base.html.twig' %}
+{# {% extends 'partials/base.html.twig' %}
 
 {% set show_onpage_menu = header.onpage_menu == true or header.onpage_menu is null %}
 
@@ -57,4 +57,13 @@
         <div id="{{ module.menu|hyphenize }}"></div>
         {{ module.content|raw }}
     {% endfor %}
+{% endblock %} #}
+
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+    {% for module in page.collection() %}
+        {{ module.content }}
+    {% endfor %}
 {% endblock %}
+
