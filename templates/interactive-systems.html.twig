@@ -1,0 +1,37 @@
+{% extends 'partials/base.html.twig' %}
+{% set grid_size = theme_var('grid-size') %}
+{% set top_image = page.media['interactive-hand.webp'] %}
+
+
+
+{% block body %}
+    <section id="body-wrapper" class="interactive-systems-container">
+        <section class="container {{ grid_size }} p-relative">
+
+            {% block intro %}
+            <section id="intro" class="columns">
+                <div class="column col-9 col-mx-auto">
+                    {# <img class="body-logo" src="{{ url('theme://images/' ~ logo_file) }}" alt="{{ logo.name }}"/> #}
+                    <pre>
+                        {{ dump(top_image) }}
+                    </pre>
+                    <h1 class="intro-title">
+                        {{ page.header.title }}
+                    </h1>
+                    <p class="intro-text">{{page.header.desc}}</p>
+                    
+                   
+            </section>
+            {% endblock %}
+
+            
+        </section>
+
+    </section>
+
+{% endblock %}
+
+{% block content %}
+	{{ page.content|raw }}
+{% endblock %}
+

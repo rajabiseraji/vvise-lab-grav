@@ -1,4 +1,3 @@
-{% set topics = page.header.topics %}
 
 <pre>
     {{ dump(topics) }}
@@ -8,7 +7,9 @@
         <div class="topic-item">
             <div class="topic-container">
                 <div class="image-container">
-                    <a href="#">
+                    {% set var = topic.key %}
+                    {{ dump(subpages) }}
+                    <a href="{{ uri.url(false) ~ '/' ~ topic.key  }}">
                         {% if topic %}
                             {% set topic_image_file = topic.image %}
                             <img class="topic-image" src="{{ url('theme://images/' ~ topic_image_file) }}" alt="{{ topic.title }}"/>
