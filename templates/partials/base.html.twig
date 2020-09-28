@@ -79,149 +79,151 @@
                 <section class="banner-container">
                     {% block banner %}{% endblock %}
                 </section>
-                <section class="container {{ grid_size }} p-relative"> 
-                    {% block logos %}
-                        {% include "partials/logo-section.html.twig" ignore missing %}
-                    {% endblock %}
-                    
-                    {% block intro %}
-                    <section id="intro" class="columns">
-                        <div class="column col-9 col-mx-auto">
-                            <h1 class="intro-title">
-                                {{ page.header.desc_title }}
-                            </h1>
-                            <p class="intro-text">{{page.header.desc[0]}}</p>
-                            <p class="intro-text">{{page.header.desc[1]}}</p>
+                <section class="container foreground-wrapper">
+                    <section class="container {{ grid_size }} p-relative"> 
+                        {% block logos %}
+                            {% include "partials/logo-section.html.twig" ignore missing %}
+                        {% endblock %}
+                        
+                        {% block intro %}
+                        <section id="intro" class="columns">
+                            <div class="column col-9 col-mx-auto">
+                                <h1 class="intro-title">
+                                    {{ page.header.desc_title }}
+                                </h1>
+                                <p class="intro-text">{{page.header.desc[0]}}</p>
+                                <p class="intro-text">{{page.header.desc[1]}}</p>
 
-                            <div class="intro-button-container">
-                                <a href="" class="main-button round">
-                                    <div class="main-button-container">
-                                        <span class="main-button-label">
-                                            OUR PUBLICATIONS
-                                        </span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="research-field-container">
-                                {% for field in page.header.research_fields %}
-                                    <div class="research-field-item">
-                                        <img src="{{ url('theme://images/' ~ field.icon) }}" alt="{{ field.name }}" class="research-field-img">
-                                        <h3 class="research-field-title">
-                                            {{ field.title }}
-                                        </h3>
-                                    </div>
-                                {% endfor %}
-                            </div>
-
-                            <div class="intro-button-container">
-                                <a href="" class="main-button round">
-                                    <div class="main-button-container">
-                                        <span class="main-button-label">
-                                            OUR RESEARCH
-                                        </span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="intro-divider-container">
-                                <div class="intro-divider"></div>
-                            </div>
-                        </div>
-                    </section>
-                    {% endblock %}
-
-                    {% block news %}
-                        <section id="news">
-                            <h1 class="intro-title">
-                                Latest News
-                            </h1>
-
-                            <section id="news-columns" class="columns">
-                                <div id="left-column" class="column col-6">
-                                    <section id="conference" class="columns">
-                                        <div class="column col-4">
-                                            <h3>Conference Highlights</h3>
+                                <div class="intro-button-container">
+                                    <a href="" class="main-button round">
+                                        <div class="main-button-container">
+                                            <span class="main-button-label">
+                                                OUR PUBLICATIONS
+                                            </span>
                                         </div>
-                                        <div class="column col-8">
-                                            <h4 class="conference-label">Presented five papers at ACM VRST 2019:</h4>
-                                            <div class="news-list-item">
-                                                a novel, efficient text entry solution for VR
-                                            </div>
-                                            <div class="news-list-item">
-                                                a novel, efficient text entry solution for VR
-                                            </div>
-                                            <div class="news-list-item">
-                                                a novel, efficient text entry solution for VR
-                                            </div>
+                                    </a>
+                                </div>
+
+                                <div class="research-field-container">
+                                    {% for field in page.header.research_fields %}
+                                        <div class="research-field-item">
+                                            <img src="{{ url('theme://images/' ~ field.icon) }}" alt="{{ field.name }}" class="research-field-img">
+                                            <h3 class="research-field-title">
+                                                {{ field.title }}
+                                            </h3>
                                         </div>
-                                    </section>
-                                    <section id="defences" class="columns">
-                                        <div class="column col-4">
-                                            <h3>Recent Thesis Defences</h3>
+                                    {% endfor %}
+                                </div>
+
+                                <div class="intro-button-container">
+                                    <a href="" class="main-button round">
+                                        <div class="main-button-container">
+                                            <span class="main-button-label">
+                                                OUR RESEARCH
+                                            </span>
                                         </div>
-                                        <div class="column col-8">
-                                            <section class="defence-year-item">
-                                                <h4 class="defence-year-label">2019</h4>
+                                    </a>
+                                </div>
+
+                                <div class="intro-divider-container">
+                                    <div class="intro-divider"></div>
+                                </div>
+                            </div>
+                        </section>
+                        {% endblock %}
+
+                        {% block news %}
+                            <section id="news">
+                                <h1 class="intro-title">
+                                    Latest News
+                                </h1>
+
+                                <section id="news-columns" class="columns">
+                                    <div id="left-column" class="column col-6">
+                                        <section id="conference" class="columns">
+                                            <div class="column col-4">
+                                                <h3>Conference Highlights</h3>
+                                            </div>
+                                            <div class="column col-8">
+                                                <h4 class="conference-label">Presented five papers at ACM VRST 2019:</h4>
                                                 <div class="news-list-item">
-                                                    Mayra Barrera Machuca (PhD)
+                                                    a novel, efficient text entry solution for VR
                                                 </div>
                                                 <div class="news-list-item">
-                                                    Mayra Barrera Machuca (PhD)
+                                                    a novel, efficient text entry solution for VR
                                                 </div>
                                                 <div class="news-list-item">
-                                                    Mayra Barrera Machuca (PhD)
+                                                    a novel, efficient text entry solution for VR
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <section id="defences" class="columns">
+                                            <div class="column col-4">
+                                                <h3>Recent Thesis Defences</h3>
+                                            </div>
+                                            <div class="column col-8">
+                                                <section class="defence-year-item">
+                                                    <h4 class="defence-year-label">2019</h4>
+                                                    <div class="news-list-item">
+                                                        Mayra Barrera Machuca (PhD)
+                                                    </div>
+                                                    <div class="news-list-item">
+                                                        Mayra Barrera Machuca (PhD)
+                                                    </div>
+                                                    <div class="news-list-item">
+                                                        Mayra Barrera Machuca (PhD)
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </section>
+                                    </div>
+                                    <div id="right-column" class="column col-6">
+                                        <section id="publications">
+                                            <h3>
+                                                Publications &amp <br> Presentations
+                                            </h3>
+                                            <section class="publication-venue" id="ACM">
+                                                <div class="venue-title">
+                                                    <a href="">ACM CHI 2020</a>
+                                                </div>
+                                                <div class="paper-title">
+                                                    <a href="">
+                                                        A new method for Self-repairing Autocorrect for Mobile Text Entry
+                                                    </a>
+                                                </div>
+                                                <div class="paper-title">
+                                                    <a href="">
+                                                    ORCSolver, a new efficient solver for adaptive GUI layout with OR-constraints
+                                                    </a>
                                                 </div>
                                             </section>
-                                        </div>
-                                    </section>
-                                </div>
-                                <div id="right-column" class="column col-6">
-                                    <section id="publications">
-                                        <h3>
-                                            Publications &amp <br> Presentations
-                                        </h3>
-                                        <section class="publication-venue" id="ACM">
-                                            <div class="venue-title">
-                                                <a href="">ACM CHI 2020</a>
-                                            </div>
-                                            <div class="paper-title">
-                                                <a href="">
-                                                    A new method for Self-repairing Autocorrect for Mobile Text Entry
-                                                </a>
-                                            </div>
-                                            <div class="paper-title">
-                                                <a href="">
-                                                   ORCSolver, a new efficient solver for adaptive GUI layout with OR-constraints
-                                                </a>
-                                            </div>
-                                        </section>
-                                        <section class="publication-venue" id="ACM">
-                                            <div class="venue-title">
-                                                <a href="">IEEE VR (Online)</a>
-                                                <small>Presented by Wolfgang Stuerzlinger</small>
-                                            </div>
-                                            <div class="paper-title">
-                                                <a href="">
-                                                    A new method for Self-repairing Autocorrect for Mobile Text Entry
+                                            <section class="publication-venue" id="ACM">
+                                                <div class="venue-title">
+                                                    <a href="">IEEE VR (Online)</a>
+                                                    <small>Presented by Wolfgang Stuerzlinger</small>
+                                                </div>
+                                                <div class="paper-title">
+                                                    <a href="">
+                                                        A new method for Self-repairing Autocorrect for Mobile Text Entry
+                                                        </a>
+                                                </div>
+                                                <div class="paper-title">
+                                                    <a href="">
+                                                        A new method for Self-repairing Autocorrect for Mobile Text Entry
                                                     </a>
-                                            </div>
-                                            <div class="paper-title">
-                                                <a href="">
-                                                    A new method for Self-repairing Autocorrect for Mobile Text Entry
-                                                </a>
-                                            </div>
+                                                </div>
+                                            </section>
                                         </section>
-                                    </section>
-                                </div>
+                                    </div>
+                                </section>
                             </section>
-                        </section>
-                    {% endblock %}
-                    
-                    {% block messages %}
-                        {% include 'partials/messages.html.twig' ignore missing %}
-                    {% endblock %}
-                    {{ block('content_surround') }}
+                        {% endblock %}
+                        
+                        {% block messages %}
+                            {% include 'partials/messages.html.twig' ignore missing %}
+                        {% endblock %}
+                        {{ block('content_surround') }}
+                    </section>
                 </section>
             </section>
         {% endblock %}

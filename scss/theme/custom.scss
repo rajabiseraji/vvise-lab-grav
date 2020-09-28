@@ -24,6 +24,9 @@
 
 
 #banner-content {
+    width: 100%;
+    height: 100vh;
+
     .banner-text {
         position: absolute;
         top: $header-height-large;
@@ -39,6 +42,10 @@
             font-weight: 100;
         }
     }
+}
+
+.foreground-wrapper {
+    background: white;
 }
 
 #logo-content {
