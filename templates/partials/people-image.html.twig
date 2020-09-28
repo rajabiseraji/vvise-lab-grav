@@ -3,6 +3,7 @@
     {% for person in people %}
     <section class="people-image-card column col-3">
         <div class="people-container">
+        <a href="{{ uri.url(false) ~ '/' ~ person.url  }}">
             <img src="{{ url('theme://images/' ~ person.image) }}" alt="{{person.name}}">
             <div class="name-container">
                 <span class="name">
@@ -12,6 +13,7 @@
                     {{person.title}}
                 </span>
             </div>
+        </a>
         </div>
     </section>
     {% endfor %}

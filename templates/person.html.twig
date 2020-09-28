@@ -1,0 +1,40 @@
+{% extends 'partials/base.html.twig' %}
+{% set grid_size = theme_var('grid-size') %}
+{% set affiliation = page.header.affiliation %}
+
+
+{% block body %}
+
+<section id="body-wrapper" class="person-container">
+	<section class="container {{ grid_size }} p-relative">
+    {% block intro %}
+        <div class="columns">
+            <section class="intro column col-8 col-mx-auto">
+                <div class="intro-img">
+                    <img class="main-img" src="{{ url('user://pages/03.people/anil-ufuk-batmaz/ufuk.webp') }}"/>
+                </div>
+                <div class="intro-text">
+                    <div class="highlighted-text title">
+                        <span class="name">
+                            Anil Ufuk Batmaz
+                        </span>
+                        <div class="highlight-container">
+                            <div class="highlight"></div>
+                            <div class="affiliation">
+                                <p>
+                                    {{ affiliation }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+        </div>
+    {% endblock intro %}
+
+
+    </section>
+</section>
+
+{% endblock %}
