@@ -108,11 +108,15 @@
 // News section
 
 section#news {
+    h3, h4 {
+        margin-top: 0;
+        color: rgb(41, 41, 41);
+    }
+
     h3 {
         font-family: inherit;
         font-size: 22px;
         font-weight: 600;
-        color: rgb(41, 41, 41);
     }
 
     p, .news-list-item {
@@ -120,16 +124,45 @@ section#news {
     }
 
     .conference-label {
+        font-family: "Roboto";
         font-weight: 100;
         font-size: 14px;
     }
 
+    #defences {
+        margin-top: 1rem;
+    }
+
     .defence-year-item {
-        margin: 1rem 0 1rem 0;
     
         .defence-year-label {
             font-size: 14px;
-            font-weight: 300;
+            font-weight: 500;
+        }
+    }
+    
+
+    .publication-venue  {
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        .venue-title a {
+            font-size: 18px;
+            font-weight: 400;
+            color: rgb(41, 41, 41);
+        }
+
+        .venue-title small {
+            font-size: 10px;
+            font-style: italic;
+        }
+
+        .paper-title {
+            margin-bottom: 0.5rem;
+            font-size: 14px;
         }
     }
 }
