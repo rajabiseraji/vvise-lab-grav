@@ -4,11 +4,11 @@
     color: $light-color;
 
     a {
-        color: rgba($light-color, 0.7) !important;
+        color: rgba(white, 0.7) !important;
     }
 
     a.active {
-        color: $light-color !important;
+        color: white !important;
     }
 
     .dropmenu ul ul a {
