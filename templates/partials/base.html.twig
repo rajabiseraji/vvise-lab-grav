@@ -1,6 +1,8 @@
 {% set body_classes = body_class(['header-fixed', 'header-animated', 'header-dark', 'header-transparent', 'sticky-footer']) %}
 {% set grid_size = theme_var('grid-size') %}
 {% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
+{% set intro_page = page.find('/home/intro') %}
+
 
 {% use 'blocks/base.html.twig' %}
 <!DOCTYPE html>
@@ -82,7 +84,10 @@
                 </section>
                 <section class="container foreground-wrapper">
                     <section class="container {{ grid_size }} p-relative"> 
-                        {% block logos %}
+                        {% if intro_page %}
+                            {% include "home-intro.html.twig" with {'page' : intro_page} %}
+                        {% endif %}
+                        {# {% block logos %}
                             {% include "partials/logo-section.html.twig" ignore missing %}
                         {% endblock %}
                         
@@ -131,7 +136,7 @@
                                 </div>
                             </div>
                         </section>
-                        {% endblock %}
+                        {% endblock %} #}
 
                         {% block news %}
                             <section id="news">

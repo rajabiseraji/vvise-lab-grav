@@ -1,0 +1,52 @@
+{% block logos %}
+	{% include "partials/logo-section.html.twig" ignore missing %}
+{% endblock %}
+
+
+{% block intro %}
+	<section id="intro" class="columns">
+		<div class="column col-9 col-mx-auto">
+			<h1 class="intro-title">
+				{{ page.header.title }}
+			</h1>
+			{% for row in page.content|split('<hr />') %}
+				<p class="intro-text">{{row}}</p>
+			{% endfor %}
+
+			<div class="intro-button-container">
+				<a href="" class="main-button round">
+					<div class="main-button-container">
+						<span class="main-button-label">
+							OUR PUBLICATIONS
+						</span>
+					</div>
+				</a>
+			</div>
+
+			<div class="research-field-container">
+				{% for field in page.header.research_fields %}
+					<div class="research-field-item">
+						<img src="{{ url('user://pages/01.home/intro/' ~ field.icon) }}" alt="{{ field.name }}" class="research-field-img">
+						<h3 class="research-field-title">
+							{{ field.title }}
+						</h3>
+					</div>
+				{% endfor %}
+			</div>
+
+			<div class="intro-button-container">
+				<a href="" class="main-button round">
+					<div class="main-button-container">
+						<span class="main-button-label">
+							OUR RESEARCH
+						</span>
+					</div>
+				</a>
+			</div>
+
+			<div class="intro-divider-container">
+				<div class="intro-divider"></div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
