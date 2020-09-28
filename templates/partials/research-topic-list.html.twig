@@ -1,0 +1,34 @@
+{% set topics = page.header.topics %}
+
+<pre>
+    {{ dump(topics) }}
+</pre>
+<div id="topic-list" class="columns">
+	{% for topic in topics %}
+        <div class="topic-item">
+            <div class="topic-container">
+                <div class="image-container">
+                    {% if topic %}
+                        {% set topic_image_file = topic.image %}
+                        <img class="topic-image" src="{{ url('theme://images/' ~ topic_image_file) }}" alt="{{ topic.title }}"/>
+                    {% else %}
+                        no logo :(
+                    {% endif %}      
+                    <div class="topic-title-container">
+                        <h2 class="topic-title">
+                            {{ topic.title }}
+                        </h2>
+                    </div>
+                </div>
+                <p class="topic-sub-categories">
+                    <span>
+                        <a href="">Large Display Immersive</a>
+                        <a href="">Large Display Immersive</a>
+                        <a href="">Large Display Immersive</a>
+                    </span>
+                </p>
+            </div>
+        </div>
+	{% endfor %}
+</div>
+
