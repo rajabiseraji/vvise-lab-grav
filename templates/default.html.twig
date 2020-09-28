@@ -1,7 +1,36 @@
 {% extends 'partials/base.html.twig' %}
+{% set intro_page = page.find('/home/intro') %}
+{% set news_page = page.find('/home/news') %}
 
-{% block banner %}
-    {% include "partials/banner.html.twig" ignore missing %}
+
+{% block body %}
+<section class="parallax-container">
+	<section
+		id="body-wrapper">
+		{# class="section" for left abnd right spacing #}
+		<section class="banner-container"> 
+			{% include "partials/banner.html.twig" ignore missing %}
+            </section>
+			<section class="container foreground-wrapper">
+				<section class="container {{ grid_size }} p-relative">
+					{% if intro_page %}
+						{% include "home-intro.html.twig" with {'page': intro_page} %}
+					{% endif %}
+
+					{% block news %}
+						{% if news_page %}
+							{% include "news.html.twig" with {'page': news_page} %}
+						{% endif %}
+					{% endblock %}
+
+					{% block messages %}
+						{% include 'partials/messages.html.twig' ignore missing %}
+					{% endblock %}
+					{{ block('content_surround') }}
+				</section>
+			</section>
+		</section>
+	</section>
 {% endblock %}
 
 

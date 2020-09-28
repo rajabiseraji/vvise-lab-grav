@@ -3,16 +3,16 @@
     {{ dump(topics) }}
 </pre>
 <div id="topic-list" class="columns">
-	{% for topic in topics %}
+	{% for topic in page.children %}
         <div class="topic-item">
             <div class="topic-container">
                 <div class="image-container">
-                    {% set var = topic.key %}
-                    {{ dump(subpages) }}
-                    <a href="{{ uri.url(false) ~ '/' ~ topic.key  }}">
+                    {% set var = topic.title %}
+                    <a href="{{ uri.url(false) ~ '/' ~ topic.slug()  }}">
                         {% if topic %}
-                            {% set topic_image_file = topic.image %}
-                            <img class="topic-image" src="{{ url('theme://images/' ~ topic_image_file) }}" alt="{{ topic.title }}"/>
+                            {% set topic_image_file = '0' ~ loop.index ~ '.' ~ topic.slug() ~ '/main.webp' %}
+                            {{ dump(topic_image_file) }}
+                            <img class="topic-image" src="{{ url('user://pages/04.research-projects/' ~ topic_image_file) }}" alt="{{ topic.title }}"/>
                         {% else %}
                             no logo :(
                         {% endif %}      
