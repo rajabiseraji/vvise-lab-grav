@@ -1,3 +1,4 @@
+@import 'components/button';
 #header {
     background: $header-color-dark;
     color: $light-color;
@@ -51,3 +52,15 @@
     font-weight: 700;
     padding: $vert-padding;
 }
+
+.intro-text {
+    font-size: 20px;
+}
+
+
+.intro-button-container {
+    padding: $vert-padding;
+    display: flex;
+    justify-content: center;
+}
+

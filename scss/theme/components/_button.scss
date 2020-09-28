@@ -1,0 +1,60 @@
+.main-button {
+    cursor: pointer;
+    border: none;
+    display: block;
+    min-width: 10px;
+    min-height: 10px;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0.25rem;
+
+    .main-button-container {
+        transition: inherit;
+        display: flex;
+        flex-basis: auto;
+        justify-content: center;
+        flex-direction: row;
+        flex-grow: 1;
+        align-items: center;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+    }
+
+    .main-button-label {
+        transition: inherit;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-family: roboto-thin, roboto, sans-serif;
+        font-size: 14px;
+        color: $button-label-color;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        min-width: 1.8em;
+        max-width: 100%;
+    }
+
+    &:hover {
+        box-shadow: inset 0 -51px 0 $button-hover-fill;
+
+        .main-button-label {
+            color: $button-hover-label-color;
+        }
+    }
+
+}
+
+.main-button.round {
+    @extend .main-button;
+    transition: all 0.2s ease, visibility 0s;
+    border-radius: 20px;
+    background: #FFFFFF;
+    border: 1px solid $button-border-color;
+}
+
+a.main-button {
+    text-decoration: none;
+    box-sizing: border-box;
+    color: #000;
+}

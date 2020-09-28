@@ -1,7 +1,6 @@
 {% set body_classes = body_class(['header-fixed', 'header-animated', 'header-dark', 'header-transparent', 'sticky-footer']) %}
 {% set grid_size = theme_var('grid-size') %}
 {% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
-{% set intro_content = page.find('/intro').content %}
 
 {% use 'blocks/base.html.twig' %}
 <!DOCTYPE html>
@@ -82,19 +81,28 @@
                 <section class="banner-container">
                     {% block banner %}{% endblock %}
                 </section>
-                <pre>
-                    {{ dump(page.header) }}
-                </pre>
                 <section class="container {{ grid_size }}"> 
                     {% block logos %}
                         {% include "partials/logo-section.html.twig" ignore missing %}
                     {% endblock %}
+                    
                     {% block intro %}
-                        {% if intro_content %}
-                            {{ intro_content|raw }}
-                        {% endif %}
-                        
+                        <h1 class="intro-title">
+                            {{ page.header.desc_title }}
+                        </h1>
+                        <p class="intro-text">{{page.header.desc[0]}}</p>
+                        <p class="intro-text">{{page.header.desc[1]}}</p>
+                        <div class="intro-button-container">
+                            <a href="" class="main-button round">
+                                <div class="main-button-container">
+                                    <span class="main-button-label">
+                                        OUR PUBLICATIONS
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
                     {% endblock %}
+                    
                     {% block messages %}
                         {% include 'partials/messages.html.twig' ignore missing %}
                     {% endblock %}
