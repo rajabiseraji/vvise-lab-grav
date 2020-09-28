@@ -1,5 +1,42 @@
 {% extends 'partials/base.html.twig' %}
 {% set grid_size = theme_var('grid-size') %}
+{% set people = [
+    {
+        name: 'Johanna',
+        title: 'M.Sc. Student',
+        image: 'woman.webp'
+    }, 
+    {
+        name: 'Johanna',
+        title: 'M.Sc. Student',
+        image: 'woman.webp'
+    }, 
+    {
+        name: 'Johanna',
+        title: 'M.Sc. Student',
+        image: 'woman.webp'
+    }, 
+    {
+        name: 'Johanna',
+        title: 'M.Sc. Student',
+        image: 'woman.webp'
+    }, 
+    {
+        name: 'Johanna',
+        title: 'M.Sc. Student',
+        image: 'woman.webp'
+    }, 
+    {
+        name: 'Johanna',
+        title: 'M.Sc. Student',
+        image: 'woman.webp'
+    }, 
+    {
+        name: 'Moh',
+        title: 'M.Sc. Student',
+        image: 'woman.webp'
+    }] %}
+
 
 {% block body %}
 
@@ -55,9 +92,12 @@
                             </div>
                         </div>
                     </div>
+
+                    {% include "partials/people-image.html.twig" with people %}
                 </div>
             </section>
 
+            
         </section>
     </section>
 {% endblock %}

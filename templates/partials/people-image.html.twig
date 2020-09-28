@@ -1,0 +1,18 @@
+
+<section class="image-container col-12 columns">
+    {% for person in people %}
+    <section class="people-image-card column col-3">
+        <div class="people-container">
+            <img src="{{ url('theme://images/' ~ person.image) }}" alt="{{person.name}}">
+            <div class="name-container">
+                <span class="name">
+                    {{person.name}}
+                </span>
+                <span class="title">
+                    {{person.title}}
+                </span>
+            </div>
+        </div>
+    </section>
+    {% endfor %}
+</section>
