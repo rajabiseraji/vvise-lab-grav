@@ -64,3 +64,28 @@
     justify-content: center;
 }
 
+.research-field-container {
+    display: flex;
+    width: 100%;
+}
+
+.research-field-item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    flex-direction: column;
+}
+
+.research-field-img {
+    max-height: 65px;
+}
+
+.research-field-title {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 100;
+    margin-top: 1rem;
+}
+

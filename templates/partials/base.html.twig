@@ -73,8 +73,6 @@
         </div>
     {% endblock %}
 
-    {% block hero %}{% endblock %}
-
         <section id="start">
         {% block body %}
             <section id="body-wrapper"> {# class="section" for left abnd right spacing #}
@@ -92,6 +90,7 @@
                         </h1>
                         <p class="intro-text">{{page.header.desc[0]}}</p>
                         <p class="intro-text">{{page.header.desc[1]}}</p>
+
                         <div class="intro-button-container">
                             <a href="" class="main-button round">
                                 <div class="main-button-container">
@@ -100,6 +99,17 @@
                                     </span>
                                 </div>
                             </a>
+                        </div>
+
+                        <div class="research-field-container">
+                            {% for field in page.header.research_fields %}
+                                <div class="research-field-item">
+                                    <img src="{{ url('theme://images/' ~ field.icon) }}" alt="{{ field.name }}" class="research-field-img">
+                                    <h3 class="research-field-title">
+                                        {{ field.title }}
+                                    </h3>
+                                </div>
+                            {% endfor %}
                         </div>
                     {% endblock %}
                     
