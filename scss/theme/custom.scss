@@ -52,7 +52,8 @@
 
 .h1 h1, .title-h1h2 h1 {
     font-size: 40px;
-    font-weight: 700;
+    font-family: inherit;
+    font-weight: 600;
     padding: $vert-padding;
 }
 
@@ -103,3 +104,33 @@
     height: 1px;
     width: $min-button-width;
 }
+
+// News section
+
+section#news {
+    h3 {
+        font-family: inherit;
+        font-size: 22px;
+        font-weight: 600;
+        color: rgb(41, 41, 41);
+    }
+
+    p, .news-list-item {
+        font-size: 14px;
+    }
+
+    .conference-label {
+        font-weight: 100;
+        font-size: 14px;
+    }
+
+    .defence-year-item {
+        margin: 1rem 0 1rem 0;
+    
+        .defence-year-label {
+            font-size: 14px;
+            font-weight: 300;
+        }
+    }
+}
+

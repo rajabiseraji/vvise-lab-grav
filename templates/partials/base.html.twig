@@ -130,6 +130,62 @@
                         </div>
                     </section>
                     {% endblock %}
+
+                    {% block news %}
+                        <section id="news">
+                            <h1 class="intro-title">
+                                Latest News
+                            </h1>
+
+                            <section id="news-columns" class="columns">
+                                <div id="left-column" class="column col-6">
+                                    <section id="conference" class="columns">
+                                        <div class="column col-4">
+                                            <h3>Conference Highlights</h3>
+                                        </div>
+                                        <div class="column col-8">
+                                            <h4 class="conference-label">Presented five papers at ACM VRST 2019:</h4>
+                                            <div class="news-list-item">
+                                                a novel, efficient text entry solution for VR
+                                            </div>
+                                            <div class="news-list-item">
+                                                a novel, efficient text entry solution for VR
+                                            </div>
+                                            <div class="news-list-item">
+                                                a novel, efficient text entry solution for VR
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section id="defences" class="columns">
+                                        <div class="column col-4">
+                                            <h3>Recent Thesis Defences</h3>
+                                        </div>
+                                        <div class="column col-8">
+                                            <section class="defence-year-item">
+                                                <h4 class="defence-year-label">2019</h4>
+                                                <div class="news-list-item">
+                                                    Mayra Barrera Machuca (PhD)
+                                                </div>
+                                                <div class="news-list-item">
+                                                    Mayra Barrera Machuca (PhD)
+                                                </div>
+                                                <div class="news-list-item">
+                                                    Mayra Barrera Machuca (PhD)
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </section>
+                                </div>
+                                <div id="right-column" class="column col-6">
+                                    <section id="publications">
+                                        <h3>
+                                            Publications &amp Presentations
+                                        </h3>
+                                    </section>
+                                </div>
+                            </section>
+                        </section>
+                    {% endblock %}
                     
                     {% block messages %}
                         {% include 'partials/messages.html.twig' ignore missing %}
