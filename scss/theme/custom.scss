@@ -341,3 +341,67 @@ section#news {
         height: 260px;
     }
 }
+
+// People
+.people-container {
+    .intro {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 2rem;
+    }
+
+    .intro-img {
+        float: right;
+    }
+
+    .intro-text {
+        position: absolute;
+        bottom: 10%;
+        left: 27%;
+
+        .meet {
+            position: relative;
+            right: 8rem;
+            top: 1rem;
+        }
+
+        .title, .title span {
+            font-size: 60px;
+            font-weight: 600;
+            color: $title-color;
+            z-index: 1;
+            position: relative
+        }
+    }
+
+    .highlighted-text {
+        position: relative;
+
+        .highlight {
+            position: absolute;
+            bottom: 10%;
+            width: 110%;
+            height: 38%;
+            left: -5%;
+            background-color: $text-highlight;
+        }
+    }
+
+    .member-text {
+        padding-top: 4rem;
+
+        .title {
+            font-size: 22px;
+            font-weight: 600;
+            font-family: inherit;
+            color: $title-color;
+            margin-top: 0;
+        }
+
+        .text {
+            font-size: 15px;
+        }
+    }
+}

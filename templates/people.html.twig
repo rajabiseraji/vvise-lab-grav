@@ -1,0 +1,63 @@
+{% extends 'partials/base.html.twig' %}
+{% set grid_size = theme_var('grid-size') %}
+
+{% block body %}
+
+    <section id="body-wrapper" class="people-container">
+        <section class="container {{ grid_size }} p-relative">
+            {% block intro %}
+                <section class="intro">
+                    <div class="intro-img">
+                        <img class="main-img" src="{{ url('theme://images/people.webp') }}"/>
+                    </div>
+                    <div class="intro-text">
+                        <span class="meet title">
+                            Meet the
+                        </span>
+                        <div class="highlighted-text title">
+                            <span class="vvise">
+                                VVISE Lab
+                            </span>
+                            <div class="highlight"></div>
+                        </div>
+                    </div>
+                </section>
+            {% endblock intro %}
+            <section class="member-text columns">
+                <div class="column columns col-10 col-mx-auto">
+                    <div class="column col-6">
+                        <div class="columns">
+                            <div class="column col-4">
+                                <h2 class="title">
+                                    Current Members
+                                </h2>
+                            </div>
+                            <div class="column col-8">
+                                <p class="text">
+                                    Many of the graduate students are or
+                                    have been supported by scholarships
+                                    from various sources.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column col-6">
+                        <div class="columns">
+                            <div class="column col-4">
+                                <h2 class="title">
+                                    Interested in joining?
+                                </h2>
+                            </div>
+                            <div class="column col-8">
+                                <p class="text">
+                                    See our open positions for current options.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+    </section>
+{% endblock %}
