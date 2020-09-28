@@ -217,6 +217,12 @@ section#news {
         .topic-image {
             width: 100%;
             height: auto;
+            transition: 0.2s ease-in-out;
+
+            &:hover {
+                transition: 0.2s ease-in-out;
+                filter: brightness(80%);
+            }
         }
 
     }

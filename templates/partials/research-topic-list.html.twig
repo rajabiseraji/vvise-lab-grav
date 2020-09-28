@@ -8,23 +8,25 @@
         <div class="topic-item">
             <div class="topic-container">
                 <div class="image-container">
-                    {% if topic %}
-                        {% set topic_image_file = topic.image %}
-                        <img class="topic-image" src="{{ url('theme://images/' ~ topic_image_file) }}" alt="{{ topic.title }}"/>
-                    {% else %}
-                        no logo :(
-                    {% endif %}      
-                    <div class="topic-title-container">
-                        <h2 class="topic-title">
-                            {{ topic.title }}
-                        </h2>
-                    </div>
+                    <a href="#">
+                        {% if topic %}
+                            {% set topic_image_file = topic.image %}
+                            <img class="topic-image" src="{{ url('theme://images/' ~ topic_image_file) }}" alt="{{ topic.title }}"/>
+                        {% else %}
+                            no logo :(
+                        {% endif %}      
+                        <div class="topic-title-container">
+                            <h2 class="topic-title">
+                                {{ topic.title }}
+                            </h2>
+                        </div>
+                    </a>
                 </div>
                 <p class="topic-sub-categories">
                     <span>
                         <a href="">Large Display Immersive</a>
-                        <a href="">Large Display Immersive</a>
-                        <a href="">Large Display Immersive</a>
+                        <a href="">Displays, 3D</a><br>
+                        <a href="">Tracking and Haptic Systems</a>
                     </span>
                 </p>
             </div>
