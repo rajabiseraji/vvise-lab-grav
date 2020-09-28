@@ -89,3 +89,14 @@
     margin-top: 1rem;
 }
 
+.intro-divider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-divider {
+    background-color: $divider-color;
+    height: 1px;
+    width: $min-button-width;
+}
