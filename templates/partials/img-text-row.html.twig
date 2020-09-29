@@ -1,0 +1,19 @@
+{% set reverse_class = left_img ? '' : 'reverse' %}
+{% set with_top_class = with_top_space ? 'with-top-space' : '' %}
+
+<section class="{{'columns ' ~ reverse_class ~ ' ' ~ with_top_class}}">
+	<div class="left-column col-6">
+		<img class="main-img" src="{{ url('theme://images/' ~ img_url) }}"/>
+	</div>
+	<div class="right-column col-6">
+        {% if title %}
+            <h2 class="content-title">
+                {{title}}
+            </h2>      
+        {% endif %}
+        
+		<p class="content-text">
+			{{text}}
+		</p>
+	</div>
+</section>

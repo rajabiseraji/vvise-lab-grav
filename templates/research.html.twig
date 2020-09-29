@@ -14,7 +14,7 @@
                     </h1>
                     <p class="intro-text">{{page.header.desc}}</p>
                     
-                    {% include 'partials/research-topic-list.html.twig' with {topics: page.header.topics, subpages: page.children} %}
+                    {% include 'partials/research-topic-list.html.twig' with {subpages: page.children} %}
 
                     <section class="older-projects columns">
                         <h2 class="older-projects-title col-12">

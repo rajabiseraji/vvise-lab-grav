@@ -1,0 +1,47 @@
+title: 'Interactive Systems'
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        highlights:
+          type: tab
+          title: 'Items'
+          fields:
+            header.items:
+              name: items
+              type: list
+              label: Items
+
+              fields:
+                .title:
+                  type: text
+                  label: 'Section Title'
+                .text:
+                  type: editor
+                  label: 'Section Text'
+                .img:
+                  type: text
+                  label: 'Image Name'
+                  description: 'Name of the image in your theme/images folder'
+                .left_img:
+                  type: toggle
+                  toggleable: true
+                  label: Image on the left
+                  options:
+                    1: PLUGIN_ADMIN.ENABLED
+                    0: PLUGIN_ADMIN.DISABLED
+                  validate:
+                    type: bool
+                .with_top_space:
+                  type: toggle
+                  toggleable: true
+                  label: Extra space above paragraph
+                  options:
+                    1: PLUGIN_ADMIN.ENABLED
+                    0: PLUGIN_ADMIN.DISABLED
+                  validate:
+                    type: bool
+                
+                  
