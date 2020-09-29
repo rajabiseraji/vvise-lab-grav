@@ -12,12 +12,12 @@
         <div class="columns">
             <section class="intro column col-8 col-mx-auto">
                 <div class="intro-img">
-                    <img class="main-img" src="{{ url('user://pages/03.people/anil-ufuk-batmaz/ufuk.webp') }}"/>
+                    <img class="main-img" src="{{ url('user://pages/03.people/' ~ page.slug() ~ '/main.webp') }}"/>
                 </div>
                 <div class="intro-text">
                     <div class="highlighted-text title">
                         <span class="name">
-                            Anil Ufuk Batmaz
+                            {{page.title}}
                         </span>
                         <div class="highlight-container">
                             <div class="highlight"></div>

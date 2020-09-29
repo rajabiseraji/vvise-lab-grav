@@ -3,14 +3,14 @@
     {% for person in people %}
     <section class="people-image-card column col-3">
         <div class="people-container">
-        <a href="{{ uri.url(false) ~ '/' ~ person.url  }}">
-            <img src="{{ url('theme://images/' ~ person.image) }}" alt="{{person.name}}">
+        <a href="{{ uri.url(false) ~ '/' ~ person.slug()  }}">
+            <img src="{{ url('user://pages/03.people/' ~ person.slug() ~ '/main.webp') }}" alt="{{person.header.title}}">
             <div class="name-container">
                 <span class="name">
-                    {{person.name}}
+                    {{person.header.title}}
                 </span>
                 <span class="title">
-                    {{person.title}}
+                    {{person.header.affiliation}}
                 </span>
             </div>
         </a>

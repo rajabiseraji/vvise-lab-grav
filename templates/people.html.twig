@@ -1,48 +1,6 @@
 {% extends 'partials/base.html.twig' %}
 {% set grid_size = theme_var('grid-size') %}
-{% set people = [
-    {
-        name: 'Johanna',
-        title: 'M.Sc. Student',
-        image: 'woman.webp',
-        url: 'anil-ufuk-batmaz'
-    }, 
-    {
-        name: 'Johanna',
-        title: 'M.Sc. Student',
-        image: 'woman.webp',
-        url: 'anil-ufuk-batmaz'
-    }, 
-    {
-        name: 'Johanna',
-        title: 'M.Sc. Student',
-        image: 'woman.webp',
-        url: 'anil-ufuk-batmaz'
-    }, 
-    {
-        name: 'Johanna',
-        title: 'M.Sc. Student',
-        image: 'woman.webp',
-        url: 'anil-ufuk-batmaz'
-    }, 
-    {
-        name: 'Johanna',
-        title: 'M.Sc. Student',
-        image: 'woman.webp',
-        url: 'anil-ufuk-batmaz'
-    }, 
-    {
-        name: 'Johanna',
-        title: 'M.Sc. Student',
-        image: 'woman.webp',
-        url: 'anil-ufuk-batmaz'
-    }, 
-    {
-        name: 'Moh',
-        title: 'M.Sc. Student',
-        image: 'woman.webp',
-        url: 'anil-ufuk-batmaz'
-    }] %}
+{% set people = page.children %}
 
 
 {% block body %}
@@ -68,7 +26,7 @@
                 </section>
             {% endblock intro %}
             <section class="member-text columns">
-                <div class="column columns col-10 col-mx-auto">
+                <div class="column columns col-10">
                     <div class="column col-6">
                         <div class="columns">
                             <div class="column col-4">
