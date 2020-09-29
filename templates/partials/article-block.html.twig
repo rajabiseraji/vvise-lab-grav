@@ -1,0 +1,21 @@
+
+<div class="{{left_column ? 'left' : 'right'}}-column column col{{ column_width ? '-' ~ column_width : '' }}">
+	{% if title %}
+		<h2 class="content-title">
+			{{title}}
+		</h2>
+	{% endif %}
+	
+	{% if text %}
+		<p class="content-text">
+			{{text}}
+		</p>
+	{% endif %}
+	
+	{% if img %}
+		<div class="with-top-space user-interfaces">
+			<img class="main-img" src="{{ url('theme://images/' ~ img) }}"/>
+		</div>
+	{% endif %}
+	
+</div>

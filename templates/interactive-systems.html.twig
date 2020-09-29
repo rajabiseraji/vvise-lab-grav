@@ -20,57 +20,6 @@
                     {% for item in page.header.items %}
                         {% include "partials/img-text-row.html.twig" with {left_img: item.left_img, with_top_space: with_top_space, title: item.title, img_url: item.img, text: item.text} %}
                     {% endfor %}
-                        {# <section class="columns">
-                            <div class="left-column col-6">
-                                <img class="main-img" src="{{ url('theme://images/V4Space.webp') }}"/>
-                            </div>
-                            <div class="right-column col-6">
-                                <h2 class="content-title">
-                                    Large Displays
-                                </h2>
-                                <p class="content-text">
-                                    V4-Space is the Vancouver Versatile Virtual Reality and Visual Analytics Wall &amp CAVE. It was funded through an NSERC Research Tools &amp Instruments grant, with W. Stuerzlinger as principal investigator, B. Riecke, R. Woodbury, and S. DiPaola. V4-Space consists of eight 85" high-end 4k displays in portrait mode, driven by a single Windows computer with two nVidia M5000's. The system was first fully functional in Summer 2016. Due to driver restrictions, a maximum of 7 portrait-mode 4k displays can be used as a single contiguous display, with 15k x 4k resolution at 60Hz. The display system is about 8m x 2m large, with a pixel density of more than 50 ppi. Through a synchronization card, display refresh is synchronized across all displays, which ensures that video and 3D graphics show without tears between displays. More technical information can be found in a recent publication that evaluates Visual Analytics work on such a large display
-                                </p>
-                            </div>
-                        </section>
-                        <section class="columns">
-                            <div class="left-column col-6">
-                                <img class="main-img" src="{{ url('theme://images/V4Spacedata.webp') }}"/>
-                            </div>
-                            <div class="right-column col-6">
-                                <p class="content-text">
-                                    Lasers can be used as an interaction device for large display surfaces. This project focusses on a new kind of laser-based input device, and is one of the few technologies, which support multiple simultaneously active users. Evaluations show that laser pointers can serve as effective input devices for large screens. Another part of the research focussed on a state-of-the art evaluation of the performance of various remote pointing devices. Our multi-user laser pointer input technology provides a basis for collaborative, shared display groupware (SDG) and computer supported cooperative work (CSCW) applications. Beyond that we are currently completing a new kind of collaborative hardware setup designed to faciltiate collaborative work by teams of 2-10 people with interdisciplinary backgrounds. Such a seamless collaborative system can be used in design review scenarios, which leads to better end products. The system is called MULTI (Multi-user laser table interface) and provides several fully interactive table and wall surfaces
-                                </p>
-                            </div>
-                        </section>
-
-                        <section class="columns reverse with-top-space">
-                            <div class="left-column col-6">
-                                <img class="main-img" src="{{ url('theme://images/cave.webp') }}"/>
-                            </div>
-                            <div class="right-column col-6">
-                                <h2 class="content-title">
-                                    Immersive Displays, TIVS
-                                </h2>
-                                <p class="content-text">
-                                    We created a six-sided CAVE, IVY, (together with M. Jenkin, R. Allison, and others VGR, CVR) which is a room where every side (including the floor and the ceiling) displays computer generated imagery. The immersive device, called IVY, was completed in 2002. Novel aspects include a ventilation system for the enclosed space and a novel tracking system. Recent work resulted in TIVS at SFU, a new temporary CAVE system that does not consume permanent floor space, while still taking less than 5 minutes to activate. The system cost is much less than $10k, which makes this a very cheap, if not the cheapest CAVE installation.
-                                </p>
-                            </div>
-                        </section>
-
-                        <section class="columns with-top-space">
-                            <div class="left-column col-6">
-                                <img class="main-img" src="{{ url('theme://images/tracking.webp') }}"/>
-                            </div>
-                            <div class="right-column col-6">
-                                <h2 class="content-title">
-                                    3D Tracking
-                                </h2>
-                                <p class="content-text">
-                                    The pose of an object in space is often described by six numbers, three to quantify the position, and three for the rotation are often used to describe any potential pose of an object in space. Following an object is thus frequently referred to as tracking 6 degrees of freedom (6 DOF). The Hedgehog is a new kind of 6 DOF tracking device, which features a large number of computer controlled laser diodes pointing outwards to project unique spots onto the walls as well as cameras outside IVY (or a CAVE) to track these spots. From these spots the position and orientation of the tracking device is computed in real-time. This in turn can be used to project the correct images for the current position of the users's head, which the tracking system is attached to. Translations can be tracked at least as accurately as current commercially available solutions. Rotations can be tracked 10 times more accurately than other systems. Hence, this technology greatly improves immersion in Virtual Reality and Augmented Reality systems. We are working to improve this technology further to make it more generally useable.
-                                </p>
-                            </div>
-                        </section> #}
                 {% endblock pagecontent %}
                 </section>
             </section>

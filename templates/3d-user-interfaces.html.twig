@@ -6,32 +6,14 @@
 {% endblock %}
 
 {% block pagecontent %}
-    <section class="columns">
-        <div class="left-column col-6">
-            <h2 class="content-title">
-                General 3D User Interfaces
-            </h2>
-            <p class="content-text">
-                One of the problems of VR systems is that 3D input devices are still in their infancy. Even more importantly, the software technologies that map the raw user movements to 3D object manipulation are also immature. Comparing the performance of intelligent algorithms for 3D manipulation in a desktop environment with a mouse with "traditional" VR manipulation techniques using 3D trackers illustrates this best. For many common tasks the desktop system with the mouse excels. This work assembles a list of guidelines for 3D manipulation. Each of the guidelines is targeted at making 3D and VR systems easier to use and is based on previous research or evaluative studies. The most recent work identifies input devices, such as the air pen, which work well for 3D manipulation.
-            </p>
-        </div>
-        <div class="right-column col-6">
-            <h2 class="content-title">
-                3D Pointing
-            </h2>
-            <p class="content-text">
-                Common 2D input devices, such as the mouse, outperform most 3D input devices on frequently used tasks in 3D environments. This seems counterintuitive at first. One aspect of the problem is that simultaneous control of three degrees of freedom is more difficult for humans compared to just two degrees of freedom. Hence, most successful systems use 3D input only rarely, see e.g. the work on Guidelines for 3D User Interfaces, mentioned below. The other aspect pertains to differences in 2D and 3D input technologies. Examples for differences include variations in latency, jitter, the effect of co-location of input and output, as well as the existence of a supporting surface. To investigate this, we have performed a series of experiments that explore and document the effects of each factor
-            </p>
-        </div>
-    </section>
-    <section class="columns with-top-space user-interfaces">
-        <div class="left-column col-6">
-            <img class="main-img" src="{{ url('theme://images/jo.webp') }}"/>
-        </div>
-        <div class="right-column col-6">
-            <img class="main-img" src="{{ url('theme://images/manipulation.webp') }}"/>
-        </div>
-    </section>
+    {% for row in page.header.rows %}
+        <section class="columns with-top-space user-interfaces">
+            {% for column in row %}
+                {% include "partials/article-block.html.twig" with {left_column: column.left_column ,column_width: column.col-width ,title: column.title ,text: column.text ,img: column.img} %}
+
+            {% endfor %}
+        </section>
+    {% endfor %}
     <section class="columns with-top-space">
         <div class="left-column col-6">
             <h2 class="content-title">

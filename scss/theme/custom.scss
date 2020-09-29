@@ -629,3 +629,13 @@ section#news {
 // #header {
 //     height: $header-height-small;
 // }
+
+//  Open positions
+.open-positions-container {
+    .intro-title {
+        font-size: 40px;
+        font-family: inherit;
+        font-weight: 600;
+        color: $title-color;
+    }
+}
