@@ -506,7 +506,7 @@ section#news {
     .intro-img {
         width: 55%;
         height: 300px;
-        background-color: rgb(190, 188, 194);
+        background-color: white;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -514,8 +514,9 @@ section#news {
 
         img {
             height: 100%;
-            width: 100%;
-            object-fit: cover;
+            // width: 100%;
+            // object-fit: cover;
+            // object-position: top;
         }
     }
 
