@@ -90,7 +90,7 @@
 }
 
 .research-field-img {
-    max-height: 65px;
+    height: 85px;
 }
 
 .research-field-title {
@@ -98,6 +98,8 @@
     font-size: 15px;
     font-weight: 100;
     margin-top: 1rem;
+    color: $title-color;
+    height: 100%;
 }
 
 .intro-divider-container {
