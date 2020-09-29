@@ -1,6 +1,7 @@
 {% extends 'partials/base.html.twig' %}
 {% set grid_size = theme_var('grid-size') %}
 {% set people = page.children %}
+{% set page_text_items = page.header.page_items.items %}
 
 
 {% block body %}
@@ -27,23 +28,23 @@
             {% endblock intro %}
             <section class="member-text columns">
                 <div class="column columns col-10">
-                    <div class="column col-6">
-                        <div class="columns">
-                            <div class="column col-4">
-                                <h2 class="title">
-                                    Current Members
-                                </h2>
-                            </div>
-                            <div class="column col-8">
-                                <p class="text">
-                                    Many of the graduate students are or
-                                    have been supported by scholarships
-                                    from various sources.
-                                </p>
+                    {% for text_item in page_text_items %}
+                        <div class="column col-6">
+                            <div class="columns">
+                                <div class="column col-4">
+                                    <h2 class="title">
+                                        {{ text_item.title }}
+                                    </h2>
+                                </div>
+                                <div class="column col-8">
+                                    <p class="text">
+                                        {{ text_item.desc }}
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="column col-6">
+                    {% endfor %}
+                    {# <div class="column col-6">
                         <div class="columns">
                             <div class="column col-4">
                                 <h2 class="title">
@@ -56,7 +57,7 @@
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </div> #}
 
                     {% include "partials/people-image.html.twig" with people %}
                 </div>
