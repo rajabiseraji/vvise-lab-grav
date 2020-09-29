@@ -1,0 +1,14 @@
+{% set banner = theme_var('custom_banner') %}
+
+<div id="banner-content">
+    {# {% if banner %}
+        {% set banner_file = (banner|first).name %}
+        <img src="{{ url('theme://images/' ~ banner_file) }}" alt="{{ site.title }}"/>
+    {% else %} #}
+        {# {% include('@images/banner.') %} #}
+        {# No banner! 
+    {% endif %} #}
+    <div class="banner-text">
+        <h1>VVISE Lab</h1>
+    </div>
+</div>
