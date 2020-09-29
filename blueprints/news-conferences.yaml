@@ -1,0 +1,30 @@
+title: 'Conference Highlights'
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        highlights:
+          type: tab
+          title: 'News Items'
+          fields:
+            header.conferences.items:
+              name: conferences
+              type: list
+              label: Conferences
+
+              fields:
+                .title:
+                  type: text
+                  label: 'Conference title'
+                .items:
+                  type: list
+                  label: 'News List'
+                  fields:
+                    .text:
+                        type: text
+                        label: 'News Text'
+                    .url:
+                        type: text
+                        label: 'URL'

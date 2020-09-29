@@ -4,13 +4,16 @@
 	<div class="column col-4">
 		<h3>{{ page.header.title }}</h3>
 	</div>
-	<div class="column col-8">
+	<div class="column col-6">
     {% for news_section in news_sections %}
         <div class="pb-2">
             <h4 class="conference-label">{{ news_section.title }}</h4>
             {% for news_item in news_section.items %}
                 <div class="news-list-item">
-                    {{news_item}}
+                    - 
+                    <a href="{{ news_item.url }}" target="_blank" rel="noopener noreferrer">
+                        {{news_item.text}}
+                    </a>
                 </div>
             {% endfor %}
         </div>

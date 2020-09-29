@@ -130,6 +130,12 @@ section#news {
 
     p, .news-list-item {
         font-size: 14px;
+        margin-bottom: 0.5rem;
+        
+        a, a:hover, a:active, a:visited {
+            color: black;
+            text-decoration: underline;
+        }
     }
 
     .conference-label {
