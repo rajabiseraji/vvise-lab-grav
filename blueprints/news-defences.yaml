@@ -1,0 +1,27 @@
+title: 'Conference Highlights'
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        highlights:
+          type: tab
+          title: 'News Items'
+          fields:
+            header.defences.items:
+              name: defences
+              type: list
+              label: Defences
+
+              fields:
+                .label:
+                  type: text
+                  label: 'Year'
+                .items:
+                  type: list
+                  label: 'Defence List'
+                  fields:
+                    .label:
+                        type: text
+                        label: 'Defence Label'
