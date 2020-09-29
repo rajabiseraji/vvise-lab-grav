@@ -1,0 +1,33 @@
+title: 'Conference Defences'
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        highlights:
+          type: tab
+          title: 'Publication Items'
+          fields:
+            header.publications.items:
+              name: publications
+              type: list
+              label: Publication Venues
+
+              fields:
+                .venue_title:
+                  type: text
+                  label: 'Venue Title'
+                .presenter:
+                  type: text
+                  label: 'Presenter name'
+                .papers:
+                  type: list
+                  label: 'Papers'
+                  fields:
+                    .title:
+                        type: text
+                        label: 'Publication Title'
+                    .url:
+                        type: text
+                        label: 'Publication URL'
