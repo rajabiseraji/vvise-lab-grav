@@ -9,7 +9,7 @@
                         {% if topic %}
                             {% set topic_image_file = '0' ~ loop.index ~ '.' ~ topic.slug() ~ '/main.webp' %}
                             {{ dump(topic_image_file) }}
-                            <img class="topic-image" src="{{ url('user://pages/04.research-projects/' ~ topic_image_file) }}" alt="{{ topic.title }}"/>
+                            <img class="topic-image" src="{{ url(uri.url(false) ~ topic_image_file) }}" alt="{{ topic.title }}"/>
                         {% else %}
                             no logo :(
                         {% endif %}      
