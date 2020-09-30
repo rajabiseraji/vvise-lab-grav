@@ -4,7 +4,7 @@
     <section class="people-image-card column col-3">
         <div class="people-container">
         <a href="{{ uri.url(false) ~ '/' ~ person.slug()  }}">
-            <img src="{{ url(person.route() ~ '/main.webp') }}" alt="{{person.header.title}}">
+            <img src="{{ url('user://pages/newwebsite/03.people/' ~ person.slug() ~ '/main.webp') }}" alt="{{person.header.title}}">
             <div class="name-container">
                 <span class="name">
                     {{person.header.title}}
