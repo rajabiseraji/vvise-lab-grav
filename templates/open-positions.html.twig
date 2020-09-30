@@ -16,8 +16,22 @@
                     <img class="main-img pt-2" src="{{ url('user://pages/06.open-positions/' ~ top_image) }}"/>
                 {% endblock mainimg %}
             </section>
+            {# <section id="intro">
+                <h3 class="content-title">
+                    UNDERGRADUATE, GRADUATE AND VOLUNTEER
+                </h3>
+                <p class="content-text">
+                    If you are interested on doing research in the VVISE lab under the supervision of the lab director and his team members,
+                    this page contains some helpful information.
+                </p>
+            </section> #}
+            {{
+                page.content
+            }}
             {% endblock intro %}
+
         </section>
+
     </section>
 
 {% endblock %}
