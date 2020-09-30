@@ -1,10 +1,12 @@
 {% extends 'partials/base.html.twig' %}
 {% set grid_size = theme_var('grid-size') %}
 
-<section id="body-wrapper" class="person-container">
-	<section class="container {{ grid_size }} p-relative">
-		<section class="publications pt-2">
-			{{page.content}}
-		</section>
-	</section>
-</section>
+{% block body %}
+    <section id="body-wrapper" class="person-container">
+        <section class="container {{ grid_size }} p-relative">
+            <section class="publications pt-2">
+                {{page.content}}
+            </section>
+        </section>
+    </section>
+{% endblock %}
