@@ -20,13 +20,19 @@
                         </div>
                     </a>
                 </div>
-                <p class="topic-sub-categories">
-                    <span>
-                        <a href="">Large Display Immersive</a>
-                        <a href="">Displays, 3D</a><br>
-                        <a href="">Tracking and Haptic Systems</a>
-                    </span>
-                </p>
+                {% if topic.header.items %}
+                    <p class="topic-sub-categories">
+                        <span>
+                            {% for t in topic.header.items %}
+                                {% if t.title %}
+                                    <a href="{{ uri.url(false) ~ '/' ~ topic.slug() ~ '#' ~ t.title  }}">
+                                        {{t.title}}
+                                    </a><br>
+                                {% endif %}
+                            {% endfor %}
+                        </span>
+                    </p>
+                {% endif %}
             </div>
         </div>
 	{% endfor %}

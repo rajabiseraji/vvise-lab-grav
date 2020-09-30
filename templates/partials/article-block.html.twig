@@ -1,7 +1,7 @@
 
 <div class="{{left_column ? 'left' : 'right'}}-column column col{{ column_width ? '-' ~ column_width : '' }}">
 	{% if title %}
-		<h2 class="content-title">
+		<h2 id="{{ title }}" class="content-title">
 			{{title}}
 		</h2>
 	{% endif %}
