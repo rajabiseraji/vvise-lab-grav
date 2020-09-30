@@ -2,6 +2,7 @@
 {% set grid_size = theme_var('grid-size') %}
 {% set affiliation = page.header.affiliation %}
 {% set interests = page.header.interests %}
+{% set contents = page.content|split('<hr />') %}
 
 
 {% block body %}
@@ -57,7 +58,7 @@
                         </div>
                         <div class="column col-8">
                             <section class="defence-year-item">
-                                {{page.content}}
+                                {{contents[0]}}
                             </section>
                         </div>
                     </section>
@@ -86,6 +87,10 @@
                 </div>
             </section>
         {% endif %}
+
+        <section class="publications pt-2">
+            {{contents[1]}}
+        </section>
 
     </section>
 </section>
