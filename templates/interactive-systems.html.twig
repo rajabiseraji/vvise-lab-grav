@@ -17,8 +17,13 @@
                 </h1>
                 <section class="page-content">
                 {% block pagecontent %}
-                    {% for item in page.header.items %}
-                        {% include "partials/img-text-row.html.twig" with {left_img: item.left_img, with_top_space: with_top_space, title: item.title, img_url: item.img, text: item.text} %}
+                    {% for row in page.header.rows %}
+                        <section class="columns with-top-space user-interfaces">
+                            {% for column in row %}
+                                	{{ dump(column.img_col_width) }}
+                                {% include "partials/article-block.html.twig" with {column_width: column.column_width, img_col_width: column.img_col_width ,title: column.title ,text: column.text ,img: column.img, has_img: column.has_img, img_position: column.img_position} %}
+                            {% endfor %}
+                        </section>
                     {% endfor %}
                 {% endblock pagecontent %}
                 </section>

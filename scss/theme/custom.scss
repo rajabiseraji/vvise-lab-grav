@@ -341,16 +341,27 @@ section#news {
         line-height: 1.3;
     }
 
+    .user-interfaces .column {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     .columns {
         margin-left: 0;
         margin-right: 0;
 
+        .column-text-items {
+            padding-right: 1rem;
+        }
+
         &.reverse {
-            .right-column {
-                order: 1;
+            .column-text-items {
+                order: 3;
+                padding-left: 1rem;
+                padding-right: 0;
             }
-            .left-column {
-                order: 2;
+            .column-img-items {
+                order: 1;
             }
         }
 
@@ -369,7 +380,8 @@ section#news {
 // 3D UI Page
 .user-interfaces {
     .main-img {
-        height: 260px;
+        height: 100%;
+        object-fit: cover;
     }
 }
 
