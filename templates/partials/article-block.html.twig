@@ -1,8 +1,7 @@
-<div class="column col{{ column_width ? '-' ~ column_width : '' }}">
-	{{ dump((img_position == 'left' or img_position == 'top')) }}
+<div class="column col{{ column_width ? '-' ~ column_width : '' }} {{ column_width < 12 ? 'partial-column' : '' }}">
 	<div class="columns {{ (img_position == 'left' or img_position == 'top') ? 'reverse' : ''  }}">
 		{% if title or text %}
-			<div class="column col{{ img_col_width ? '-' ~ (12 - img_col_width) : '' }} column-text-items">
+			<div class="column col{{ (img_col_width < 12) ? '-' ~ (12 - img_col_width) : '' }} column-text-items">
 				{% if title %}
 					<h2 id="{{ title }}" class="content-title">
 						{{title}}

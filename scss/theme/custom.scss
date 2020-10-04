@@ -383,6 +383,21 @@ section#news {
         height: 100%;
         object-fit: cover;
     }
+
+    .partial-column:not(:first-child) {
+        padding-left: 1rem;
+    }
+
+    .partial-column {
+        .column-img-items {
+            height: 250px;
+            align-self: flex-end;
+        }
+
+        .columns {
+            height: 100%;
+        }
+    }
 }
 
 // People

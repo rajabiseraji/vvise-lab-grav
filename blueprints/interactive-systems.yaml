@@ -10,9 +10,9 @@ form:
           title: 'Items'
           fields:
             header.items:
-              name: items
+              name: rows
               type: list
-              label: Items
+              label: Rows
 
               fields:
                 .title:
@@ -25,10 +25,10 @@ form:
                   type: text
                   label: 'Image Name'
                   description: 'Name of the image in your theme/images folder'
-                .left_img:
+                .has_img:
                   type: toggle
                   toggleable: true
-                  label: Image on the left
+                  label: Has Image
                   options:
                     1: PLUGIN_ADMIN.ENABLED
                     0: PLUGIN_ADMIN.DISABLED
