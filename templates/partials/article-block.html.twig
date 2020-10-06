@@ -9,12 +9,12 @@
 				{% endif %}
 				
 				{% if text %}
-					<p class="content-text">
-						{{text}}
+					{# <p class="content-text"> #}
+						{{text|markdown}}
 						{% if text_markdown %}
-							{{ text_markdown }}
+							{# {{ page.content }} #}
 						{% endif %}
-					</p>
+					{# </p> #}
 				{% endif %}
 			</div>
 		{% endif %}
