@@ -9,6 +9,21 @@ form:
           type: tab
           title: 'Items'
           fields:
+            header.top_img:
+              name: top_img
+              type: filepicker
+              label: Top Image
+
+              fields:
+                .img: 
+                  type: filepicker
+                  folder: '@self'
+                  label: Select a file
+                  preview_images: true
+                  accept:
+                    - .png
+                    - .jpg
+                    
             header.rows:
               name: rows
               type: list
