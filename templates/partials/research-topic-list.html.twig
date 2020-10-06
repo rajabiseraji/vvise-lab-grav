@@ -7,7 +7,7 @@
                     {% set var = topic.title %}
                     <a href="{{ uri.url(false) ~ '/' ~ topic.slug()  }}">
                         {% if topic %}
-                            {% set topic_image_file = '0' ~ loop.index ~ '.' ~ topic.slug() ~ '/main.webp' %}
+                            {% set topic_image_file = '0' ~ loop.index ~ '.' ~ topic.slug() ~ '/main.png' %}
                             {{ dump(topic_image_file) }}
                             <img class="topic-image" src="{{ url('user://pages/newwebsite/04.research-projects/' ~ topic_image_file) }}" alt="{{ topic.title }}"/>
                         {% else %}
