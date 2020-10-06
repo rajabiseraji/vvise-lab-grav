@@ -1,6 +1,5 @@
 {% extends 'partials/base.html.twig' %}
 {% set grid_size = theme_var('grid-size') %}
-{% set top_image = 'interactive-hand.webp' %}
 
 
 {% block body %}
@@ -10,7 +9,7 @@
             {% block intro %}
             <section id="intro">
                 {% block mainimg %}
-                    <img class="main-img" src="{{ url('theme://images/' ~ top_image) }}"/>
+                    <img class="main-img" src="{{ url('theme://images/' ~ page.header.top_img) }}"/>
                 {% endblock mainimg %}
                 <h1 class="intro-title">
                 {{ page.header.title }}
