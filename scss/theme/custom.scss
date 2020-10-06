@@ -310,6 +310,18 @@ section#news {
 .interactive-systems-container {
     @extend .research-container;
 
+    .top-img {
+        height: 20vh;
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
     .main-img {
         width: 100%;
     }
