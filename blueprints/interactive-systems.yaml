@@ -23,6 +23,15 @@ form:
                   accept:
                     - .png
                     - .jpg
+            header.hidden:
+              name: hidden
+              type: toggle
+              label: Is NOT a main top in research projects page
+              options:
+                1: 'True'
+                0: 'False'
+              validate:
+                type: bool
                     
             header.rows:
               name: rows
@@ -67,7 +76,6 @@ form:
                         max: 12
                     .has_img:
                       type: toggle
-                      toggleable: true
                       label: Has Image
                       options:
                         1: PLUGIN_ADMIN.ENABLED
@@ -76,7 +84,6 @@ form:
                         type: bool
                     .with_top_space:
                       type: toggle
-                      toggleable: true
                       label: Extra space above paragraph
                       options:
                         1: PLUGIN_ADMIN.ENABLED
@@ -85,7 +92,6 @@ form:
                         type: bool
                     .left-column:
                       type: toggle
-                      toggleable: true
                       label: Left Column
                       options:
                         1: PLUGIN_ADMIN.ENABLED

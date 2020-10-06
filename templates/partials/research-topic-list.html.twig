@@ -1,40 +1,42 @@
 
 <div id="topic-list" class="columns">
 	{% for topic in page.children %}
-        <div class="topic-item">
-            <div class="topic-container">
-                <div class="image-container">
-                    {% set var = topic.title %}
-                    <a href="{{ uri.url(false) ~ '/' ~ topic.slug()  }}">
-                        {% if topic %}
-                            {% set topic_image_file = '0' ~ loop.index ~ '.' ~ topic.slug() ~ '/main.png' %}
-                            {{ dump(topic_image_file) }}
-                            <img class="topic-image" src="{{ url('user://pages/newwebsite/04.research-projects/' ~ topic_image_file) }}" alt="{{ topic.title }}"/>
-                        {% else %}
-                            no logo :(
-                        {% endif %}      
-                        <div class="topic-title-container">
-                            <h2 class="topic-title">
-                                {{ topic.title }}
-                            </h2>
-                        </div>
-                    </a>
+        {% if not topic.header.hidden %}
+            <div class="topic-item">
+                <div class="topic-container">
+                    <div class="image-container">
+                        {% set var = topic.title %}
+                        <a href="{{ uri.url(false) ~ '/' ~ topic.slug()  }}">
+                            {% if topic %}
+                                {% set topic_image_file = '0' ~ loop.index ~ '.' ~ topic.slug() ~ '/main.png' %}
+                                {{ dump(topic_image_file) }}
+                                <img class="topic-image" src="{{ url('user://pages/newwebsite/04.research-projects/' ~ topic_image_file) }}" alt="{{ topic.title }}"/>
+                            {% else %}
+                                no logo :(
+                            {% endif %}      
+                            <div class="topic-title-container">
+                                <h2 class="topic-title">
+                                    {{ topic.title }}
+                                </h2>
+                            </div>
+                        </a>
+                    </div>
+                    {% if topic.header.items %}
+                        <p class="topic-sub-categories">
+                            <span>
+                                {% for t in topic.header.items %}
+                                    {% if t.title %}
+                                        <a href="{{ uri.url(false) ~ '/' ~ topic.slug() ~ '#' ~ t.title  }}">
+                                            {{t.title}}
+                                        </a><br>
+                                    {% endif %}
+                                {% endfor %}
+                            </span>
+                        </p>
+                    {% endif %}
                 </div>
-                {% if topic.header.items %}
-                    <p class="topic-sub-categories">
-                        <span>
-                            {% for t in topic.header.items %}
-                                {% if t.title %}
-                                    <a href="{{ uri.url(false) ~ '/' ~ topic.slug() ~ '#' ~ t.title  }}">
-                                        {{t.title}}
-                                    </a><br>
-                                {% endif %}
-                            {% endfor %}
-                        </span>
-                    </p>
-                {% endif %}
             </div>
-        </div>
+        {% endif %}
 	{% endfor %}
 </div>
 
