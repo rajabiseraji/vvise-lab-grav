@@ -63,7 +63,7 @@ body, html {
 }
 
 .parallax-container {
-    background-image: url('../images/banner.webp');
+    background-image: url('../images/banner.webp'), url('../images/banner.png');
     padding-bottom: 15rem;
     height: 100%;
 
