@@ -9,7 +9,7 @@
             {% block intro %}
             <section id="intro">
                 {% block mainimg %}
-                    <img class="main-img" src="{{ url('theme://images/' ~ page.header.top_img) }}"/>
+                    <img class="main-img" src="{{ page.url() ~ '/' ~ page.header.top_img }}"/>
                 {% endblock mainimg %}
                 <h1 class="intro-title">
                 {{ page.header.title }}
@@ -18,7 +18,7 @@
                 {% block pagecontent %}
                     {% for row in page.header.rows %}
                         <section class="columns with-top-space user-interfaces">
-                            {% for column in row %}
+                            {% for column in row.columns %}
                                 	{{ dump(column.img_col_width) }}
                                 {% include "partials/article-block.html.twig" with {column_width: column.column_width, img_col_width: column.img_col_width ,title: column.title ,text: column.text ,img: column.img, has_img: column.has_img, img_position: column.img_position} %}
                             {% endfor %}
