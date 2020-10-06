@@ -19,7 +19,7 @@
 		{% if has_img %}
 			<div class="column col{{ img_col_width ? '-' ~ img_col_width : '' }} column-img-items">
 				{# <div class="with-top-space user-interfaces"> #}
-					<img class="main-img" src="{{ url('theme://images/' ~ img) }}"/>
+					<img class="main-img" src="{{ page.url() ~ '/' ~ img }}"/>
 				{# </div> #}
 			</div>
 		{% endif %}
