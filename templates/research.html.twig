@@ -23,11 +23,17 @@
                                     {{topic.header.title}}
                                 </h2>
                                 <p class="topic-sub-categories col-12">
-                                    <span>
-                                        <a href="">High Dynamic Range Systems,</a>
-                                        <a href="">Displays, 3D</a><br>
-                                        <a href="">Tracking and Haptic Systems</a>
-                                    </span>
+                                    {% for row in topic.header.rows %}
+                                        <span>
+                                            {% for column in row.columns %}
+                                                {% if column.title %}
+                                                    <a href="{{ uri.url(false) ~ '/' ~ topic.slug() ~ '#' ~ column.title  }}">
+                                                        {{column.title}}
+                                                    </a><br>
+                                                {% endif %}
+                                            {% endfor %}
+                                        </span>
+                                    {% endfor %}
                                 </p>
                             </section>
                         {% endif %}

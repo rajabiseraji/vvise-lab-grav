@@ -9,7 +9,6 @@
                         <a href="{{ uri.url(false) ~ '/' ~ topic.slug()  }}">
                             {% if topic %}
                                 {% set topic_image_file = '0' ~ loop.index ~ '.' ~ topic.slug() ~ '/main.png' %}
-                                {{ dump(topic_image_file) }}
                                 <img class="topic-image" src="{{ url('user://pages/newwebsite/04.research-projects/' ~ topic_image_file) }}" alt="{{ topic.title }}"/>
                             {% else %}
                                 no logo :(
@@ -21,19 +20,19 @@
                             </div>
                         </a>
                     </div>
-                    {% if topic.header.items %}
-                        <p class="topic-sub-categories">
+                    <p class="topic-sub-categories">
+                        {% for row in topic.header.rows %}
                             <span>
-                                {% for t in topic.header.items %}
-                                    {% if t.title %}
-                                        <a href="{{ uri.url(false) ~ '/' ~ topic.slug() ~ '#' ~ t.title  }}">
-                                            {{t.title}}
+                                {% for column in row.columns %}
+                                    {% if column.title %}
+                                        <a href="{{ uri.url(false) ~ '/' ~ topic.slug() ~ '#' ~ column.title  }}">
+                                            {{column.title}}
                                         </a><br>
                                     {% endif %}
                                 {% endfor %}
                             </span>
-                        </p>
-                    {% endif %}
+                        {% endfor %}
+                    </p>
                 </div>
             </div>
         {% endif %}

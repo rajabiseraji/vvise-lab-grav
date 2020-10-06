@@ -1,5 +1,7 @@
 {% extends 'partials/base.html.twig' %}
 {% set grid_size = theme_var('grid-size') %}
+{% set contents = page.content|split('<hr />') %}
+
 
 
 {% block body %}
@@ -9,9 +11,11 @@
             {% block intro %}
             <section id="intro">
                 {% block mainimg %}
-                    <div class="top-img">
-                        <img class="main-img" src="{{ page.url() ~ '/' ~ page.header.top_img }}"/>
-                    </div>
+                    {% if page.header.top_img %}
+                        <div class="top-img">
+                            <img class="main-img" src="{{ page.url() ~ '/' ~ page.header.top_img }}"/>
+                        </div>
+                    {% endif %}
                 {% endblock mainimg %}
                 <h1 class="intro-title">
                 {{ page.header.title }}
@@ -21,8 +25,7 @@
                     {% for row in page.header.rows %}
                         <section class="columns with-top-space user-interfaces">
                             {% for column in row.columns %}
-                                	{{ dump(column.img_col_width) }}
-                                {% include "partials/article-block.html.twig" with {column_width: column.column_width, img_col_width: column.img_col_width ,title: column.title ,text: column.text, text_markdown: column.text_markdown ,img: column.img, has_img: column.has_img, img_position: column.img_position} %}
+                                {% include "partials/article-block.html.twig" with {column_width: column.column_width, img_col_width: column.img_col_width ,title: column.title ,text: column.text, text_markdown: column.text_markdown ,img: column.img, has_img: column.has_img, img_position: column.img_position, page_contents: contents[loop.index]} %}
                             {% endfor %}
                         </section>
                     {% endfor %}
