@@ -377,6 +377,11 @@ section#news {
                 max-height: 30vh;
                 margin-bottom: 1rem;
             }
+            &.top {
+                .column-text-items {
+                    padding-left: 0;
+                }
+            }
         }
 
         &.with-top-space {
