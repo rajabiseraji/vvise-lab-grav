@@ -22,7 +22,7 @@
                         <section class="columns with-top-space user-interfaces">
                             {% for column in row.columns %}
                                 	{{ dump(column.img_col_width) }}
-                                {% include "partials/article-block.html.twig" with {column_width: column.column_width, img_col_width: column.img_col_width ,title: column.title ,text: column.text ,img: column.img, has_img: column.has_img, img_position: column.img_position} %}
+                                {% include "partials/article-block.html.twig" with {column_width: column.column_width, img_col_width: column.img_col_width ,title: column.title ,text: column.text, text_markdown: column.text_markdown ,img: column.img, has_img: column.has_img, img_position: column.img_position} %}
                             {% endfor %}
                         </section>
                     {% endfor %}

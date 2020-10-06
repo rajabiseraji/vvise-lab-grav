@@ -11,6 +11,9 @@
 				{% if text %}
 					<p class="content-text">
 						{{text}}
+						{% if text_markdown %}
+							{{ page.content }}
+						{% endif %}
 					</p>
 				{% endif %}
 			</div>
