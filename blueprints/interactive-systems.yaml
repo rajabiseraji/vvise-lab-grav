@@ -9,39 +9,84 @@ form:
           type: tab
           title: 'Items'
           fields:
-            header.items:
+            header.rows:
               name: rows
               type: list
               label: Rows
 
               fields:
-                .title:
-                  type: text
-                  label: 'Section Title'
-                .text:
-                  type: editor
-                  label: 'Section Text'
-                .img:
-                  type: text
-                  label: 'Image Name'
-                  description: 'Name of the image in your theme/images folder'
-                .has_img:
-                  type: toggle
-                  toggleable: true
-                  label: Has Image
-                  options:
-                    1: PLUGIN_ADMIN.ENABLED
-                    0: PLUGIN_ADMIN.DISABLED
-                  validate:
-                    type: bool
-                .with_top_space:
-                  type: toggle
-                  toggleable: true
-                  label: Extra space above paragraph
-                  options:
-                    1: PLUGIN_ADMIN.ENABLED
-                    0: PLUGIN_ADMIN.DISABLED
-                  validate:
-                    type: bool
+                .columns:
+                  name: columns
+                  type: list
+                  label: Columns
+
+                  fields: 
+                    .title:
+                      type: text
+                      label: 'Section Title'
+                    .text:
+                      type: editor
+                      label: 'Section Text'
+                    .img: 
+                      type: filepicker
+                      folder: '@self'
+                      label: Select a file
+                      preview_images: true
+                      accept:
+                        - .png
+                        - .jpg
+                    .column_width: 
+                      type: number
+                      label: 'Column Width'
+                      description: 'A number between 1-12 to specify the width of this column of content'
+                      validate: 
+                        type: int
+                        min: 0
+                        max: 12
+                    .img_col_width: 
+                      type: number
+                      label: 'Image Column Width'
+                      validate: 
+                        type: int
+                        min: 0
+                        max: 12
+                    .has_img:
+                      type: toggle
+                      toggleable: true
+                      label: Has Image
+                      options:
+                        1: PLUGIN_ADMIN.ENABLED
+                        0: PLUGIN_ADMIN.DISABLED
+                      validate:
+                        type: bool
+                    .with_top_space:
+                      type: toggle
+                      toggleable: true
+                      label: Extra space above paragraph
+                      options:
+                        1: PLUGIN_ADMIN.ENABLED
+                        0: PLUGIN_ADMIN.DISABLED
+                      validate:
+                        type: bool
+                    .left-column:
+                      type: toggle
+                      toggleable: true
+                      label: Left Column
+                      options:
+                        1: PLUGIN_ADMIN.ENABLED
+                        0: PLUGIN_ADMIN.DISABLED
+                      validate:
+                        type: bool
+                    .img_position: 
+                      type: radio
+                      label: Image position
+                      default: bottom
+                      options:
+                          bottom: Bottom
+                          top: Top
+                          left: Left
+                          right: Right
+                    
+
                 
                   
