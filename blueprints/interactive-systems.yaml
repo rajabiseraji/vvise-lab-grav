@@ -98,6 +98,16 @@ form:
                           top: Top
                           left: Left
                           right: Right
+                    .has_publications:
+                      type: toggle
+                      label: Has publications
+                      default: 0
+                      options:
+                        1: PLUGIN_ADMIN.ENABLED
+                        0: PLUGIN_ADMIN.DISABLED
+                      validate:
+                        type: bool
+
                     
 
                 

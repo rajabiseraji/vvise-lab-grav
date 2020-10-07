@@ -27,7 +27,7 @@
                         <section class="columns with-top-space user-interfaces">
                             {% for column in row.columns %}
                                 {% set main_index = main_index + 1 %}
-                                {% include "partials/article-block.html.twig" with {column_width: column.column_width, img_col_width: column.img_col_width ,title: column.title ,text: column.text, text_markdown: column.text_markdown ,img: column.img, has_img: column.has_img, img_position: column.img_position, page_contents: contents[main_index]} %}
+                                {% include "partials/article-block.html.twig" with {column_width: column.column_width, img_col_width: column.img_col_width ,title: column.title ,text: column.text, text_markdown: column.text_markdown ,img: column.img, has_img: column.has_img, img_position: column.img_position, page_contents: contents[main_index], has_publications: column.has_publications} %}
                             {% endfor %}
                         </section>
                     {% endfor %}

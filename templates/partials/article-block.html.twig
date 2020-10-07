@@ -14,9 +14,9 @@
 				{% if text %}
 					{# <p class="content-text"> #}
 						{{text|markdown}}
-						{% if page_contents %}
+						{% if has_publications %}
 							<details class="accordion">
-								<summary class="accordion-header">
+								<summary class="accordion-header chevron-down-button">
 									<i class="icon icon-arrow-right mr-1"></i>
 									Our publications in this area:
 								</summary>
