@@ -1,0 +1,16 @@
+title: 'Interactive Systems'
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        highlights:
+          type: tab
+          title: 'Website'
+          fields:
+            header.website:
+              name: website
+              type: text
+              label: Website
+              
