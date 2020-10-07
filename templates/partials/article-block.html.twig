@@ -15,7 +15,18 @@
 					{# <p class="content-text"> #}
 						{{text|markdown}}
 						{% if page_contents %}
-							{{ page_contents }}
+							<details class="accordion">
+								<summary class="accordion-header">
+									<i class="icon icon-arrow-right mr-1"></i>
+									Our publications in this area:
+								</summary>
+								<div
+									class="accordion-body">
+									{{ page_contents }}
+								</div>
+							</details>
+
+							
 						{% endif %}
 					{# </p> #}
 				{% endif %}
