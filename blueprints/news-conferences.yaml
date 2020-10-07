@@ -13,11 +13,14 @@ form:
               name: conferences
               type: list
               label: Conferences
-
+              style: vertical
+              classes: "goosh"
+              
               fields:
                 .title:
                   type: text
                   label: 'Conference title'
+                  classes: 'chesh'
                 .items:
                   type: list
                   label: 'News List'

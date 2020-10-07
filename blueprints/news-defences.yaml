@@ -13,7 +13,8 @@ form:
               name: defences
               type: list
               label: Defences
-
+              style: vertical
+              
               fields:
                 .label:
                   type: text

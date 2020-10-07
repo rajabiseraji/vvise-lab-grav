@@ -13,7 +13,8 @@ form:
               name: publications
               type: list
               label: Publication Venues
-
+              style: vertical
+              
               fields:
                 .venue_title:
                   type: text

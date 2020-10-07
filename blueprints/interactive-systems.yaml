@@ -32,6 +32,7 @@ form:
               name: rows
               type: list
               label: Rows
+              style: vertical
 
               fields:
                 .columns:
