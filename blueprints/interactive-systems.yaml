@@ -39,6 +39,7 @@ form:
                   name: columns
                   type: list
                   label: Columns
+                  style: vertical
 
                   fields: 
                     .title:
@@ -50,7 +51,8 @@ form:
                     .img: 
                       type: filepicker
                       folder: '@self'
-                      label: Select a file
+                      label: Image File
+                      description: 'Pick and image from the existing page media. For new images, upload it in the media of the page and then select it from here'
                       preview_images: true
                       accept:
                         - .png
@@ -66,6 +68,7 @@ form:
                     .img_col_width: 
                       type: number
                       label: 'Image Column Width'
+                      description: 'A number between 1-12 to specify the width of this column of content. Defaults to 12 if not set.'
                       validate: 
                         type: int
                         min: 0
@@ -81,14 +84,6 @@ form:
                     .with_top_space:
                       type: toggle
                       label: Extra space above paragraph
-                      options:
-                        1: PLUGIN_ADMIN.ENABLED
-                        0: PLUGIN_ADMIN.DISABLED
-                      validate:
-                        type: bool
-                    .left-column:
-                      type: toggle
-                      label: Left Column
                       options:
                         1: PLUGIN_ADMIN.ENABLED
                         0: PLUGIN_ADMIN.DISABLED
