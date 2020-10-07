@@ -14,9 +14,9 @@ form:
               type: filepicker
               label: Top Image
               preview_images: true
-                accept:
-                  - .png
-                  - .jpg
+              accept:
+                - .png
+                - .jpg
 
             header.hidden:
               name: hidden
