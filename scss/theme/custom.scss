@@ -81,6 +81,10 @@ nav * {
     padding: $vert-padding;
     display: flex;
     justify-content: center;
+
+    .main-button-label {
+        font-weight: 300;
+    }
 }
 
 .research-field-container {
