@@ -9,6 +9,10 @@ form:
           type: tab
           title: 'Website'
           fields:
+            header.affiliation:
+              name: affiliation
+              type: text
+              label: Position title
             header.website:
               name: website
               type: text
