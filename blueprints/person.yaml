@@ -7,7 +7,7 @@ form:
       fields:
         highlights:
           type: tab
-          title: 'Website'
+          title: 'Personal Info'
           fields:
             header.affiliation:
               name: affiliation
