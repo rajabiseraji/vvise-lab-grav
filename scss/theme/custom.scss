@@ -370,6 +370,12 @@ section#news {
             padding-right: 1rem;
         }
 
+        .column-img-items {
+            &.top, &.bottom {
+                max-height: 30vh;
+            }
+        }
+
         &.reverse {
             .column-text-items {
                 order: 3;
@@ -378,7 +384,6 @@ section#news {
             }
             .column-img-items {
                 order: 1;
-                max-height: 30vh;
                 margin-bottom: 1rem;
             }
             &.top {
