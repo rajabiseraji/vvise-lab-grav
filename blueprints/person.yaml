@@ -17,4 +17,16 @@ form:
               name: website
               type: text
               label: Website
+            header.interests:
+              name: interests
+              type: list
+              label: Interests
+
+              fields:
+                .interest:
+                  name: interest
+                  type: text
+                  label: Interest Title
+
+
               
