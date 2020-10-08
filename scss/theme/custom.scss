@@ -371,7 +371,9 @@ section#news {
         }
 
         &.top, &.bottom {
-            max-height: 30vh;
+            .column-img-items {
+                max-height: 30vh;
+            }
         }
 
         &.reverse {
