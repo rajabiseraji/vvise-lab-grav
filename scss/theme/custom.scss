@@ -401,6 +401,12 @@ section#news {
             }
         }
 
+        &.bottom {
+            .column-img-items {
+                margin-top: 1rem;
+            }
+        }
+
         &.reverse {
             .column-text-items {
                 order: 3;
@@ -414,11 +420,6 @@ section#news {
             &.top {
                 .column-text-items {
                     padding-left: 0;
-                }
-            }
-            &.bottom {
-                .column-img-items {
-                    margin-top: 1rem;
                 }
             }
         }
