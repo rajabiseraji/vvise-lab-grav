@@ -360,6 +360,31 @@ section#news {
     .user-interfaces .column {
         padding-left: 0;
         padding-right: 0;
+
+        summary {
+            display: flex;
+            align-items: center;
+            
+            a {
+                font-weight: 500;
+                color: black; 
+            }
+        }
+
+        .svg-icon {
+            display: inline-flex;
+            align-items: center;
+            width: 25px;
+            height: 25px;
+            margin-right: 0.5rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
     }
 
     .columns {
@@ -729,3 +754,4 @@ section#news {
 .main-logo-banner {
     height: 40%;
 }
+

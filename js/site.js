@@ -56,4 +56,19 @@ jQuery(document).ready(function($){
     // Tree Menu
     $(".tree").treemenu({delay:300});
 
+    // Responsive Menu
+    $('.modal-opener').click(function () {
+        console.log('hello world!');
+        var modalID = $(this).attr('data-modal');
+        var searchQuery = '#' + modalID;
+        $('#' + modalID).toggleClass('active'); 
+    });
+
+    $('.modal-overlay').click(function () {
+       $('.modal').removeClass('active'); 
+    });
+
+    $('.modal-close-btn').click(function () {
+       $('.modal').removeClass('active'); 
+    });
 });

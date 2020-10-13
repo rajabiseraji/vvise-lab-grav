@@ -6,7 +6,7 @@
 		{% if title or text %}
 			<div class="column col{{ (img_col_width < 12) ? '-' ~ (12 - img_col_width) : '' }} column-text-items">
 				{% if title %}
-					<h2 id="{{ title }}" class="content-title">
+					<h2 id="title-{{ title }}" class="content-title">
 						{{title}}
 					</h2>
 				{% endif %}
@@ -15,7 +15,7 @@
 					{# <p class="content-text"> #}
 						{{text|markdown}}
 						{% if has_publications %}
-							<details class="accordion">
+							{# <details class="accordion">
 								<summary class="accordion-header chevron-down-button">
 									<i class="icon icon-arrow-right mr-1"></i>
 									Our publications in this area:
@@ -24,7 +24,38 @@
 									class="accordion-body">
 									{{ page_contents }}
 								</div>
-							</details>
+							</details> #}
+							<div class="modal-opener" id="modal-btn-{{title}}" data-modal="{{title|replace({' ': ''})|replace({'&': 'n'})}}">
+								<summary class="chevron-down-button">
+									{# <i class="icon icon-apps mr-1"></i> #}
+									<div class="svg-icon">
+										<img src="{{ url('theme://images/article.png') }}" alt="i">
+									</div>
+									<a>
+										Our publications in this area
+									</a>
+								</summary>
+								{# <div
+									class="accordion-body">
+									{{ page_contents }}
+								</div> #}
+							</div>
+							<div class="modal" id="{{title|replace({' ': ''})|replace({'&': 'n'})}}">
+								<a href="#close" class="modal-overlay" aria-label="Close"></a>
+								<div class="modal-container">
+									<div class="modal-header">
+										<a href="#close" class="btn btn-clear float-right modal-close-btn" aria-label="Close"></a>
+										<div class="modal-title h5">{{ title }}</div>
+									</div>
+									<div class="modal-body">
+										<div
+											class="content">
+											{{ page_contents }}
+										</div>
+									</div>
+								</div>
+							</div>
+
 
 							
 						{% endif %}
