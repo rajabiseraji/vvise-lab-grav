@@ -411,7 +411,7 @@ section#news {
                 order: 1;
                 margin-bottom: 1rem;
             }
-            &.top {
+            &.top, &.left {
                 .column-text-items {
                     padding-left: 0;
                 }
