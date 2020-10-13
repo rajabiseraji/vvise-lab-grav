@@ -25,12 +25,12 @@
 
 			<div class="research-field-container">
 				{% for field in page.header.research_fields %}
-					<div class="research-field-item">
+					<a href="{{ uri.route(true) ~ 'research-projects/' ~ field.slug }}" class="research-field-item">
 						<img src="{{ url('user://pages/01.home/intro/' ~ field.icon) }}" alt="{{ field.name }}" class="research-field-img">
 						<h3 class="research-field-title">
 							{{ field.title }}
 						</h3>
-					</div>
+					</a>
 				{% endfor %}
 			</div>
 

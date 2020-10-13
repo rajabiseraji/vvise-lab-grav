@@ -1,0 +1,34 @@
+title: 'Conference Defences'
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        highlights:
+          type: tab
+          title: 'Research Fields'
+          fields:
+            header.research_fields:
+              name: research_fields
+              type: list
+              label: Research Fields
+              style: vertical
+              
+              fields:
+                .title:
+                  type: text
+                  label: 'Research Area Title'
+                .icon: 
+                  type: filepicker
+                  folder: '@self'
+                  label: Research Area Icon
+                  description: 'Pick and image from the existing page media. For new images, upload it in the media of the page and then select it from here'
+                  preview_images: true
+                  accept:
+                    - .png
+                    - .jpg
+                .slug:
+                  type: text
+                  label: 'Route name'
+                  description: 'Name of the page route name in the website. e.g. 2d-user-interfaces'
