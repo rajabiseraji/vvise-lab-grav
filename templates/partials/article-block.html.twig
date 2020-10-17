@@ -28,9 +28,9 @@
 							<div class="modal-opener" id="modal-btn-{{title}}" data-modal="{{title|replace({' ': ''})|replace({'&': 'n'})}}">
 								<summary class="chevron-down-button">
 									{# <i class="icon icon-apps mr-1"></i> #}
-									<div class="svg-icon">
+									{# <div class="svg-icon">
 										<img src="{{ url('theme://images/article.png') }}" alt="i">
-									</div>
+									</div> #}
 									<a>
 										Our publications in this area
 									</a>
@@ -40,7 +40,7 @@
 									{{ page_contents }}
 								</div> #}
 							</div>
-							<div class="modal" id="{{title|replace({' ': ''})|replace({'&': 'n'})}}">
+							<div class="modal modal-lg" id="{{title|replace({' ': ''})|replace({'&': 'n'})}}">
 								<a href="#close" class="modal-overlay" aria-label="Close"></a>
 								<div class="modal-container">
 									<div class="modal-header">
