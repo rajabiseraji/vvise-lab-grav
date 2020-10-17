@@ -775,5 +775,9 @@ section#news {
             background: rgba($bg-color, .75);
         }
     }
+
+    .modal-container {
+        @include shadow-variant(.2rem);
+    }
 }
 
