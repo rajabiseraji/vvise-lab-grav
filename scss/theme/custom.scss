@@ -767,3 +767,13 @@ section#news {
     height: 40%;
 }
 
+
+// Modals
+.modal {
+    &.modal-lg {
+        .modal-overlay {
+            background: transparent;
+        }
+    }
+}
+
