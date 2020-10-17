@@ -1,14 +1,24 @@
-{% block logos %}
-	{% include "partials/logo-section.html.twig" ignore missing %}
-{% endblock %}
+
+{% set logos = theme_var('logos') %}
 
 
 {% block intro %}
 	<section id="intro" class="columns">
 		<div class="column col-9 col-mx-auto">
-			<h1 class="intro-title">
-				{{ page.header.title }}
-			</h1>
+			<div class="intro-title-container">
+				<a href="{{ logos[0].link }}" target="_blank" rel="noopener noreferrer">
+					<img class="body-logo" src="{{ url('theme://images/' ~ logos[0].name) }}" alt="{{ logos[0].name }}"/>
+				</a>
+
+				<h1 class="intro-title">
+					{{ page.header.title }}
+				</h1>
+
+				<a href="{{ logos[1].link }}" target="_blank" rel="noopener noreferrer">
+					<img class="body-logo" src="{{ url('theme://images/' ~ logos[1].name) }}" alt="{{ logos[1].name }}"/>
+				</a>
+
+			</div>
 			{% for row in page.content|split('<hr />') %}
 				<p class="intro-text">{{row}}</p>
 			{% endfor %}

@@ -56,12 +56,18 @@ nav * {
     background: white;
 }
 
-#logo-content {
-    position: absolute;
-    right: 0;
+.body-logo {
+    max-width: 60px;
+}
 
-    .body-logo {
-        max-width: 60px;
+.intro-title-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    h1.intro-title {
+        // margin-top: 0;
+        // padding-top: 0;
     }
 }
 
