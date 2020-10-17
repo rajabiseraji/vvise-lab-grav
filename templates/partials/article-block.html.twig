@@ -6,7 +6,7 @@
 		{% if title or text %}
 			<div class="column col{{ (img_col_width < 12) ? '-' ~ (12 - img_col_width) : '' }} column-text-items">
 				{% if title %}
-					<h2 id="title-{{ title }}" class="content-title">
+					<h2 id="title-{{title|replace({' ': ''})|replace({'&': 'n'})}}" class="content-title">
 						{{title}}
 					</h2>
 				{% endif %}
@@ -15,16 +15,6 @@
 					{# <p class="content-text"> #}
 						{{text|markdown}}
 						{% if has_publications %}
-							{# <details class="accordion">
-								<summary class="accordion-header chevron-down-button">
-									<i class="icon icon-arrow-right mr-1"></i>
-									Our publications in this area:
-								</summary>
-								<div
-									class="accordion-body">
-									{{ page_contents }}
-								</div>
-							</details> #}
 							<div class="modal-opener" id="modal-btn-{{title}}" data-modal="{{title|replace({' ': ''})|replace({'&': 'n'})}}">
 								<summary class="chevron-down-button">
 									{# <i class="icon icon-apps mr-1"></i> #}
@@ -35,10 +25,6 @@
 										Our publications in this area
 									</a>
 								</summary>
-								{# <div
-									class="accordion-body">
-									{{ page_contents }}
-								</div> #}
 							</div>
 							<div class="modal modal-lg" id="{{title|replace({' ': ''})|replace({'&': 'n'})}}">
 								<a href="#close" class="modal-overlay" aria-label="Close"></a>

@@ -27,7 +27,8 @@
                                         <span>
                                             {% for column in row.columns %}
                                                 {% if column.title %}
-                                                    <a href="{{ uri.url(false) ~ '/' ~ topic.slug() ~ '#' ~ column.title  }}">
+                                                    {% set columnTitle = 'title-' ~ column.title|replace({' ': ''})|replace({'&': 'n'}) %}
+                                                    <a href="{{ uri.url(false) ~ '/' ~ topic.slug() ~ '#' ~ (columnTitle)  }}">
                                                         {{column.title}}
                                                     </a><br>
                                                 {% endif %}
