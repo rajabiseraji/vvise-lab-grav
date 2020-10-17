@@ -772,7 +772,7 @@ section#news {
 .modal {
     &.modal-lg {
         .modal-overlay {
-            background: transparent;
+            background: rgba($bg-color, .75);
         }
     }
 }
