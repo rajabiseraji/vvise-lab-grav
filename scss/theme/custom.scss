@@ -774,10 +774,10 @@ section#news {
         .modal-overlay {
             background: rgba($bg-color, .75);
         }
+        .modal-container {
+            @include shadow-variant(.2rem);
+        }
     }
 
-    .modal-container {
-        @include shadow-variant(.2rem);
-    }
 }
 
