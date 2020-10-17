@@ -10,7 +10,7 @@ blog-page: '/blog'
 custom_logo: [{name: 'logo.webp'}]
 custom_logo_mobile: [{name: 'logo.webp'}]
 custom_banner: [{name: 'banner.webp'}]
-logos: [{name: 'sfu.png'}, {name: 'siat.png'}]
+logos: [{name: 'sfu.png', link: 'https://www.sfu.ca/'}, {name: 'siat.png', link: 'https://www.sfu.ca/siat.html'}]
 spectre:
   exp: false
   icons: false

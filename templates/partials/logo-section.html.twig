@@ -3,7 +3,9 @@
     {% for logo in logos %}
         {% if logo %}
             {% set logo_file = logo.name %}
-            <img class="body-logo" src="{{ url('theme://images/' ~ logo_file) }}" alt="{{ logo.name }}"/>
+            <a href="{{ logo.link }}" target="_blank" rel="noopener noreferrer">
+                <img class="body-logo" src="{{ url('theme://images/' ~ logo_file) }}" alt="{{ logo.name }}"/>
+            </a>
         {% else %}
             no logo :(
         {% endif %}
