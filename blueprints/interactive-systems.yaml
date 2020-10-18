@@ -61,6 +61,7 @@ form:
                       type: number
                       label: 'Column Width'
                       description: 'A number between 1-12 to specify the width of this column of content'
+                      default: 12
                       validate: 
                         type: int
                         min: 0
