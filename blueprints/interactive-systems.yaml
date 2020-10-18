@@ -40,7 +40,7 @@ form:
                   type: list
                   label: Columns
                   style: vertical
-
+                   
                   fields: 
                     .title:
                       type: text
@@ -69,6 +69,7 @@ form:
                       type: number
                       label: 'Image Column Width'
                       description: 'A number between 1-12 to specify the width of this column of content. Defaults to 12 if not set.'
+                      default: 12
                       validate: 
                         type: int
                         min: 0
