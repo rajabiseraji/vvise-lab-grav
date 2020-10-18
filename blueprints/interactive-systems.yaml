@@ -12,7 +12,8 @@ form:
             header.top_img:
               name: top_img
               type: filepicker
-              label: Top Image
+              label: Header Image
+              description: 'The image that is shown on the top of the page'
               preview_images: true
               accept:
                 - .png
@@ -21,12 +22,15 @@ form:
             header.hidden:
               name: hidden
               type: toggle
-              label: Is NOT a main top in research projects page
+              label: Has a thumbnail in research projects page
+              default: 0
+              description: If True, there would be a thumbnail for this page in research projects page
               options:
                 1: 'True'
                 0: 'False'
               validate:
                 type: bool
+                required: true
                     
             header.rows:
               name: rows
@@ -58,39 +62,47 @@ form:
                         - .png
                         - .jpg
                     .column_width: 
-                      type: number
+                      type: select
                       label: 'Column Width'
-                      description: 'A number between 1-12 to specify the width of this column of content'
+                      description: 'What portion of the row does this column occupy'
                       default: 12
-                      validate: 
-                        type: int
-                        min: 0
-                        max: 12
+                      options: 
+                        12: 'Fill the Row Width'
+                        6: 'Half the Row Width'
+                        4: 'A Third of the Row Width'
+                      validate:
+                        required: true 
                     .img_col_width: 
-                      type: number
-                      label: 'Image Column Width'
-                      description: 'A number between 1-12 to specify the width of this column of content. Defaults to 12 if not set.'
+                      type: select
+                      label: 'Image Width'
+                      description: 'What portion of this column belongs to its image'
                       default: 12
-                      validate: 
-                        type: int
-                        min: 0
-                        max: 12
+                      options: 
+                        12: 'Fill column'
+                        6: 'Half of the column'
+                        4: 'A Third of the column' 
+                      validate:
+                        required: true 
                     .has_img:
                       type: toggle
                       label: Has Image
+                      default: 0
                       options:
-                        1: PLUGIN_ADMIN.ENABLED
-                        0: PLUGIN_ADMIN.DISABLED
+                        1: 'True'
+                        0: 'False'
                       validate:
+                        required: true
                         type: bool
                     .with_top_space:
                       type: toggle
                       label: Extra space above paragraph
+                      default: 0
                       options:
-                        1: PLUGIN_ADMIN.ENABLED
-                        0: PLUGIN_ADMIN.DISABLED
+                        1: 'True'
+                        0: 'False'
                       validate:
                         type: bool
+                        required: true
                     .img_position: 
                       type: radio
                       label: Image position
@@ -102,11 +114,12 @@ form:
                           right: Right
                     .has_publications:
                       type: toggle
-                      label: Has publications
+                      label: Has publications popup
+                      description: If true, there would be a bibtex modal entry on that column
                       default: 0
                       options:
-                        1: PLUGIN_ADMIN.ENABLED
-                        0: PLUGIN_ADMIN.DISABLED
+                        1: 'True'
+                        0: 'False'
                       validate:
                         type: bool
 
