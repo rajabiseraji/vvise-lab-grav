@@ -1,4 +1,6 @@
 var isTouch = window.DocumentTouch && document instanceof DocumentTouch;
+// smoothscroll.polyfill();
+
 
 function scrollHeader() {
     // Has scrolled class on header
@@ -70,5 +72,14 @@ jQuery(document).ready(function($){
 
     $('.modal-close-btn').click(function () {
        $('.modal').removeClass('active'); 
+    });
+
+
+    // Scrolling
+    $("#banner-animation").click(function () {
+        $('html, body').animate({
+            scrollTop: $("#intro").offset().top
+        }, 10);
+        console.log('Im done');
     });
 });
