@@ -422,12 +422,14 @@ section#news {
             }
             .column-img-items {
                 order: 1;
-                margin-bottom: 1rem;
                 background-color: rgba(10, 10, 10, 0.1);
             }
             &.top {
                 .column-text-items {
                     padding-left: 0;
+                }
+                .column-img-items {
+                    margin-bottom: 1rem;
                 }
             }
         }
