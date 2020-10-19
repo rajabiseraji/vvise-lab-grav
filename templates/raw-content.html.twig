@@ -1,0 +1,35 @@
+{% extends 'partials/base.html.twig' %}
+{% set grid_size = theme_var('grid-size') %}
+{% set top_image = 'main.png' %}
+
+
+{% block body %}
+	<section id="body-wrapper" class="open-positions-container">
+		<section class="container {{ grid_size }} p-relative">
+
+			{% block intro %}
+				<section id="intro">
+					<h1 class="intro-title">
+						{{ page.header.title }}
+					</h1>
+					{% block mainimg %}
+						{# <img class="main-img pt-2" src="{{ url('user://pages/06.open-positions/' ~ top_image) }}"/> #}
+					{% endblock mainimg %}
+				</section>
+				{# <section id="intro">
+				                <h3 class="content-title">
+				                    UNDERGRADUATE, GRADUATE AND VOLUNTEER
+				                </h3>
+				                <p class="content-text">
+				                    If you are interested on doing research in the VVISE lab under the supervision of the lab director and his team members,
+				                    this page contains some helpful information.
+				                </p>
+				            </section> #}
+				{{page.content}}
+			{% endblock intro %}
+
+		</section>
+
+	</section>
+
+{% endblock %}
