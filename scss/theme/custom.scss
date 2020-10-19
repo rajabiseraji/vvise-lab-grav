@@ -404,7 +404,7 @@ section#news {
         &.top, &.bottom {
             .column-img-items {
                 max-height: 30vh;
-                background-color: rgba(10, 10, 10, 0.1);
+                background-color: rgba(10, 10, 10, 0.03);
             }
         }
 
@@ -422,7 +422,7 @@ section#news {
             }
             .column-img-items {
                 order: 1;
-                background-color: rgba(10, 10, 10, 0.1);
+                background-color: rgba(10, 10, 10, 0.03);
             }
             &.top {
                 .column-text-items {
@@ -461,7 +461,7 @@ section#news {
         .column-img-items {
             height: 250px;
             align-self: flex-end;
-            background-color: rgba(10, 10, 10, 0.1);
+            background-color: rgba(10, 10, 10, 0.03);
         }
 
         .columns {
