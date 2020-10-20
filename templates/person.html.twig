@@ -57,6 +57,23 @@
                             {% endfor %}
                         </div>
                     </section>
+                    {% if page.children.count > 0 %}
+                        <section id="conference" class="columns">
+                            <div class="column col-4">
+                                <h3>More Information</h3>
+                            </div>
+                            <div class="column col-8">
+                                {% for p in page.children %}
+                                    <div class="news-list-item">
+                                        <a href="{{ p.url }}">
+                                            {{ p.title }};
+                                        </a>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </section>
+                    {% endif %}
+                    
                 </div>
                 <div id="right-column" class="column col-6">
                     <section id="defences" class="columns">
