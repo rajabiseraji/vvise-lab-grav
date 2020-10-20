@@ -3,8 +3,9 @@
     {% for person in people %}
     <section class="people-image-card column col-3">
         <div class="people-container">
+        {{ dump(person.media['main.png'].url|e) }}
         <a href="{{ uri.url(false) ~ '/' ~ person.slug()  }}">
-            <img src="{{ url('user://pages/03.people/' ~ person.slug() ~ '/main.png') }}" alt="{{person.header.title}}">
+            <img src="{{ person.media['main.png'].url|e }}" alt="{{person.header.title}}">
             <div class="name-container">
                 <span class="name">
                     {{person.header.title}}
