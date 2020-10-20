@@ -78,8 +78,13 @@
                     </div>
                     <div class="website-text">
                         <a href="{{ page.header.website }}">
-                            {{ page.header.website }}
+                            {{ page.header.website }} <br>
                         </a>
+                        {% if page.header.email %}
+                            <a href="{{ page.header.email }}">
+                                {{ page.header.email }}
+                            </a>
+                        {% endif %}
                     </div>
                     <div class="intro-divider-container">
                         <div class="intro-divider"></div>

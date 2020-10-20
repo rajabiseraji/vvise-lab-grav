@@ -17,6 +17,10 @@ form:
               name: website
               type: text
               label: Website
+            header.email:
+              name: email
+              type: text
+              label: Email
             header.interests:
               name: interests
               type: list
