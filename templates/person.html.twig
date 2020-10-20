@@ -27,6 +27,13 @@
                                     {{ affiliation }}
                                 </p>
                             </div>
+                            {% if page.header.email %}
+                                <div class="affiliation">
+                                    <a href="{{ 'mailto:' ~ page.header.email }}">
+                                        {{ page.header.email }}
+                                    </a>
+                                </div>
+                            {% endif %}
                         </div>
                     </div>
                     

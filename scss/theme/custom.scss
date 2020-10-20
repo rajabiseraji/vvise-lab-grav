@@ -686,6 +686,19 @@ section#news {
         p {
             font-size: 15px;
         }
+
+        
+        a, a:focus, a:visited {
+            font-size: 15px;
+            display: inline-block;
+            color: black;
+            text-decoration-style: solid;
+            text-decoration-color: #3f4b6041;
+            text-decoration-skip-ink: auto;
+            text-decoration-line: underline;
+        }
+
+
     }
 
     .person-text-parent {
