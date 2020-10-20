@@ -1,21 +1,22 @@
 
 <section class="image-container col-12 columns">
     {% for person in people %}
-    <section class="people-image-card column col-3">
-        <div class="people-container">
-        {{ dump(person.media['main.png'].url|e) }}
-        <a href="{{ uri.url(false) ~ '/' ~ person.slug()  }}">
-            <img src="{{ person.media['main.png'].url|e }}" alt="{{person.header.title}}">
-            <div class="name-container">
-                <span class="name">
-                    {{person.header.title}}
-                </span>
-                <span class="title">
-                    {{person.header.affiliation}}
-                </span>
-            </div>
-        </a>
-        </div>
-    </section>
+        {% if person.slug != 'alumni' %}
+            <section class="people-image-card column col-3">
+                <div class="people-container">
+                <a href="{{ uri.url(false) ~ '/' ~ person.slug()  }}">
+                    <img src="{{ person.media['main.png'].url|e }}" alt="{{person.header.title}}">
+                    <div class="name-container">
+                        <span class="name">
+                            {{person.header.title}}
+                        </span>
+                        <span class="title">
+                            {{person.header.affiliation}}
+                        </span>
+                    </div>
+                </a>
+                </div>
+            </section>
+        {% endif %}
     {% endfor %}
 </section>
