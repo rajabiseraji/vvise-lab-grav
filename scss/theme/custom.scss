@@ -66,6 +66,8 @@ nav * {
     justify-content: space-between;
     align-items: center;
 
+    p
+
     h1.intro-title {
         margin-top: 0;
         padding-top: 0;
@@ -82,6 +84,9 @@ nav * {
 
 .intro-text {
     font-size: 20px;
+    & ~ p {
+        text-align: center;
+    }
 }
 
 
