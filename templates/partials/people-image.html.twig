@@ -11,7 +11,9 @@
                             {{person.header.title}}
                         </span>
                         <span class="title">
-                            {{person.header.affiliation}}
+                            {% for affiliation in person.header.affiliations %}
+                                {{affiliation.title}}{% if not loop.last %}, {% endif %}
+                            {% endfor %}
                         </span>
                     </div>
                 </a>

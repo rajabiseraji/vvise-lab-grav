@@ -1,6 +1,6 @@
 {% extends 'partials/base.html.twig' %}
 {% set grid_size = theme_var('grid-size') %}
-{% set affiliation = page.header.affiliation %}
+{% set affiliations = page.header.affiliations %}
 {% set interests = page.header.interests %}
 {% set contents = page.content|split('<hr />') %}
 
@@ -25,7 +25,9 @@
                             <div class="highlight"></div>
                             <div class="affiliation">
                                 <p>
-                                    {{ affiliation }}
+                                    {% for affiliation in affiliations %}
+                                        {{ affiliation.title }}{% if not loop.last %},<br>{% endif %}
+                                    {% endfor %}
                                 </p>
                             </div>
                             {% if page.header.email %}

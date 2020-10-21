@@ -9,10 +9,16 @@ form:
           type: tab
           title: 'Personal Info'
           fields:
-            header.affiliation:
-              name: affiliation
-              type: text
-              label: Position title
+            header.affiliations:
+              name: affiliations
+              type: list
+              label: List of positions
+
+              fields:
+                .title:
+                  name: affiliation
+                  type: text
+                  label: Position Title
             header.website:
               name: website
               type: text
