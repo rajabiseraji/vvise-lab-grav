@@ -687,7 +687,7 @@ section#news {
         width: 50%;
         top: 2rem;
         position: absolute;
-
+        
         p {
             font-size: 15px;
         }
@@ -819,5 +819,33 @@ section#news {
         }
     }
 
+}
+
+#contact-us {
+    p, a {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    a,
+    a:hover,
+    a:active,
+    a:visited {
+        text-decoration-style: solid;
+        text-decoration-color: #3f4b6041;
+        text-decoration-line: underline;
+        text-decoration-skip-ink: auto;
+        color: black;
+        outline: 0;
+        outline-color: initial;
+        outline-style: initial;
+        outline-width: 0px;
+        vertical-align: baseline;
+
+        &:hover,
+        &:active {
+            text-decoration-color: #3f4b60b6;
+        }
+    }
 }
 
