@@ -67,7 +67,7 @@
                                 {% for p in page.children %}
                                     <div class="news-list-item">
                                         <a href="{{ p.url }}">
-                                            {{ p.title }};
+                                            {{ p.title }}{% if not loop.last %};{% endif %}
                                         </a>
                                     </div>
                                 {% endfor %}
