@@ -52,7 +52,8 @@
                         <div class="column col-8">
                             {% for interest in interests %}
                                 <div class="news-list-item">
-                                    {{ interest.interest }};
+                                    {{ interest.interest }} {% if not loop.last %};{% endif %}
+                                    
                                 </div>
                             {% endfor %}
                         </div>
