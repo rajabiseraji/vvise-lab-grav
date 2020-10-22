@@ -190,13 +190,13 @@ section#news {
 
         a {
             text-decoration-style: solid;
-            // text-decoration-line: underline;
-            text-decoration-color: #3f4b6041;
+            text-decoration-line: underline;
+            text-decoration-color: rgb(97, 97, 97);
             text-decoration-skip-ink: auto;
             color: black;
         }
         
-        .venue-title a {
+        .venue-title span {
             font-size: 18px;
             font-weight: 400;
             color: rgb(41, 41, 41);

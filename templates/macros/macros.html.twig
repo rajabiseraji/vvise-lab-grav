@@ -2,15 +2,27 @@
   {% import _self as macros %}
   {% for p in page.children.visible %}
     {% set active_page = (p.active or p.activeChild) ? 'active' : '' %}
-    <li>
-      <a href="{{ p.url }}" class="{{ active_page }}">
-        {{ p.menu }}
-      </a>
-      {% if p.children.visible.count > 0 %}
-      <ul>
-        {{ macros.nav_loop(p) }}
-      </ul>
+      <li>
+        <a href="{{ p.url }}" class="{{ active_page }}">
+          {{ p.menu }}
+        </a>
+        {% if p.children.visible.count > 0 %}
+        <ul>
+          {{ macros.nav_loop(p) }}
+        </ul>
+        {% endif %}
+      </li>
+      {% if page.slug == 'home' %}
+        <li>
+          <a href="{{ page.url ~ '/#news' }}">
+            Latest News
+          </a>
+        </li>
+        <li>
+          <a href="{{ page.url ~ '/#contact-us' }}">
+            Contact Us
+          </a>
+        </li>
       {% endif %}
-    </li>
   {% endfor %}
 {% endmacro %}
