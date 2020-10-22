@@ -4,7 +4,7 @@
     {% set active_page = (p.active or p.activeChild) ? 'active' : '' %}
       {% if page.slug == 'home' %}
         <li>
-          <a href="{{ page.url ~ '/#news' }}">
+          <a href="{{ page.url ~ '#news' }}">
             Latest News
           </a>
         </li>
@@ -21,7 +21,7 @@
       </li>
       {% if page.slug == 'home' %}
         <li>
-          <a href="{{ page.url ~ '/#contact-us' }}">
+          <a href="{{ page.url ~ '#contact-us' }}">
             Contact Us
           </a>
         </li>
