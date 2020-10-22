@@ -11,9 +11,15 @@
             {% for news_item in news_section.items %}
                 <div class="news-list-item">
                     - 
-                    <a href="{{ news_item.url }}" target="_blank" rel="noopener noreferrer">
-                        {{news_item.text}}
-                    </a>
+                    {% if news_item.url %}
+                        <a href="{{ news_item.url }}" target="_blank" rel="noopener noreferrer">
+                            {{news_item.text}}
+                        </a>
+                    {% else %}
+                        <span>
+                            {{ news_item.text }}
+                        </span>    
+                    {% endif %}
                 </div>
             {% endfor %}
         </div>
