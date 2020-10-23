@@ -23,6 +23,10 @@ form:
               name: website
               type: text
               label: Website
+            header.hyperlinkText:
+              name: hyperlinkText
+              type: text
+              label: Hyperlink Text
             header.email:
               name: email
               type: text

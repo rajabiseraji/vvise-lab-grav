@@ -105,9 +105,16 @@
                         </svg>
                     </div>
                     <div class="website-text">
-                        <a href="{{ page.header.website }}" target="_blank">
-                            {{ page.header.website }} <br>
-                        </a>
+                        {% if page.header.hyperlinkText %}
+                            <a href="{{ page.header.website }}" target="_blank">
+                                {{ page.header.hyperlinkText }} <br>
+                            </a>
+                        {% else %}
+                            <a href="{{ page.header.website }}" target="_blank">
+                                {{ page.header.website }} <br>
+                            </a>
+                        {% endif %}
+                        
                         {% if page.header.email %}
                             <a href="{{ 'mailto:' ~ page.header.email }}">
                                 {{ page.header.email }}
