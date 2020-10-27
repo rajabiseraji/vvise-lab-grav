@@ -5,7 +5,12 @@
             <section class="people-image-card column col-3">
                 <div class="people-container">
                 <a href="{{ uri.url(false) ~ '/' ~ person.slug()  }}">
-                    <img src="{{ person.media['main.png'].url|e }}" alt="{{person.header.title}}">
+                    {% if person.media['thumbnail.png'] %}
+                        <img src="{{ person.media['thumbnail.png'].url|e }}" alt="{{person.header.title}}">
+                    {% else %}
+                        <img src="{{ person.media['main.png'].url|e }}" alt="{{person.header.title}}">
+                    {% endif %}
+                    
                     <div class="name-container">
                         <span class="name">
                             {{person.header.title}}
