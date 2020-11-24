@@ -80,6 +80,15 @@ jQuery(document).ready(function($){
         $('html, body').animate({
             scrollTop: $("#intro").offset().top
         }, 10);
-        console.log('Im done');
+    });
+    $(".downArrow").click(function () {
+        $('html, body').animate({
+            scrollTop: $("#intro").offset().top
+        }, 10);
+    });
+
+    $(window).scroll(function(){
+        $(".downArrow").css("opacity", 1 - $(window).scrollTop() / 250); 
+    //250 is fade pixels
     });
 });
