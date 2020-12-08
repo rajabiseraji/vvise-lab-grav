@@ -323,7 +323,7 @@ section#news {
         margin-bottom: 0.5rem;
     }
 
-    #topic-list {
+    #topic-list, #old-topic-list {
         display: flex;
         justify-content: center;
 
@@ -346,10 +346,14 @@ section#news {
             }
         }
 
-        #research-img-3d-user-interfaces {
-            // filter: brightness(50%);
-        }
+    }
 
+    #old-topic-list {
+        justify-content: flex-start;
+
+        .topic-item { 
+            flex: unset;
+        }
     }
 
     .topic-title-container {

@@ -16,7 +16,7 @@
                     
                     {% include 'partials/research-topic-list.html.twig' with {subpages: page.children} %}
                     
-                    {% for topic in page.children %}
+                    {# {% for topic in page.children %}
                         {% if topic.header.hidden %}
                             <section class="older-projects columns">
                                 <h2 class="older-projects-title col-12">
@@ -38,7 +38,48 @@
                                 </p>
                             </section>
                         {% endif %}
-                    {% endfor %}
+                    {% endfor %} #}
+                    <div id="old-topic-list" class="columns">
+                        {% for topic in page.children %}
+                            {% if topic.header.hidden %}
+                                <div class="topic-item">
+                                    <div class="topic-container">
+                                        <div class="image-container">
+                                            {% set var = topic.header.title %}
+                                            <a href="{{ uri.url(false) ~ '/' ~ topic.slug() }}">
+                                                {% if topic %}
+                                                    {% set topic_image_file = '0' ~ loop.index ~ '.' ~ topic.slug() ~ '/main.png' %}
+                                                    <img id="{{'research-img-' ~ topic.slug()}}" class="topic-image" src="{{ url('user://pages/04.research-projects/' ~ topic_image_file) }}" alt="{{ topic.title }}"/>
+                                                {% else %}
+                                                    no logo :(
+                                                {% endif %}
+                                                <div class="topic-title-container">
+                                                    <h2 class="topic-title">
+                                                        {{ topic.header.title }}
+                                                    </h2>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <p class="topic-sub-categories">
+                                            {% for row in topic.header.rows %}
+                                                <span>
+                                                    {% for column in row.columns %}
+                                                        {% if column.title %}
+                                                            {% set columnTitle = 'title-' ~ column.title|replace({' ': ''})|replace({'&': 'n'}) %}
+                                                            <a href="{{ uri.url(false) ~ '/' ~ topic.slug() ~ '#' ~ columnTitle }}">
+                                                                {{column.title}}
+                                                            </a><br>
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                </span>
+                                            {% endfor %}
+                                        </p>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+
                 </p>
                 </div>
             </section>
