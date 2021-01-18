@@ -19,7 +19,17 @@
         fill: $light-color;
     }
 
+    //this is overrridden in header.scss in spectre sass files
+    position: sticky;
+    right: 0;
+    left: 0;
+
     
+}
+
+.columns{
+    margin-right: 0;
+    margin-left: 0;
 }
 
 p, a, div {
@@ -28,6 +38,10 @@ p, a, div {
 
 nav * {
     font-weight: 300;
+}
+
+.w-100 {
+    width: 100%;
 }
 
 
@@ -183,6 +197,7 @@ nav * {
 
 .research-field-container {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
 }
 
