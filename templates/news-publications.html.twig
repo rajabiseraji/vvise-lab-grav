@@ -1,31 +1,35 @@
 {% set news_publications = page.header.publications.items %}
 
 
-<section id="publications">
-	<h3>
-		Publications &amp
-		<br>
-		Presentations
-	</h3>
-    {% for publication_venue in news_publications %}
-        <section class="publication-venue" id="{{ publication_venue.venue_title }}">
-            <div class="venue-title">
-                <span>{{ publication_venue.venue_title }}</span>
-                {% if publication_venue.presenter %}
-                    <small><em>Presented by</em> {{presenter.name}}</small>
-                {% endif %}
-            </div>
-            {% for paper in publication_venue.papers %}
-                <div class="paper-title">
-                    {% if paper.url %}
-                        <a href="{{ paper.url }}">
-                            {{ paper.title }}
-                        </a>
-                    {% else %}
-                        <span>{{ paper.title }}</span>
+<section id="publications" class="columns">
+	<div class="column col-md-12 col-4">
+        <h3>
+            Publications &amp
+            <br>
+            Presentations
+        </h3>
+    </div>
+    <div class="column col-md-12 col-6">
+        {% for publication_venue in news_publications %}
+            <section class="publication-venue" id="{{ publication_venue.venue_title }}">
+                <div class="venue-title">
+                    <span>{{ publication_venue.venue_title }}</span>
+                    {% if publication_venue.presenter %}
+                        <small><em>Presented by</em> {{presenter.name}}</small>
                     {% endif %}
                 </div>
-            {% endfor %}
-        </section>
-    {% endfor %}
+                {% for paper in publication_venue.papers %}
+                    <div class="paper-title">
+                        {% if paper.url %}
+                            <a href="{{ paper.url }}">
+                                {{ paper.title }}
+                            </a>
+                        {% else %}
+                            <span>{{ paper.title }}</span>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </section>
+        {% endfor %}
+    </div>
 </section>

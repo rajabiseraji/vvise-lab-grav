@@ -10,7 +10,7 @@
 	</h1>
 
 	<section id="news-columns" class="columns">
-		<div id="left-column" class="column col-6">
+		<div id="left-column" class="column col-md-12 col-6">
 			{% block conferences %}
                 {% if conferences %}
                     {% include "news-conferences.html.twig" with {'page': conferences} %}
@@ -24,7 +24,7 @@
             {% endblock %}
 			
 		</div>
-		<div id="right-column" class="column col-6">
+		<div id="right-column" class="column col-md-12 col-6">
 			{% block publications %}
                 {% if publications %}
                     {% include "news-publications.html.twig" with {'page': publications} %}
