@@ -2,7 +2,7 @@
 <section class="image-container col-12 columns">
     {% for person in people %}
         {% if person.slug != 'alumni' %}
-            <section class="people-image-card column col-3">
+            <section class="people-image-card column col-sm-6 col-md-4 col-3">
                 <div class="people-container">
                 <a href="{{ uri.url(false) ~ '/' ~ person.slug()  }}">
                     {% if person.media['thumbnail.png'] %}

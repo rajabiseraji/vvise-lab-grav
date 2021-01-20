@@ -780,13 +780,14 @@ section#news {
             justify-content: center;
             align-items: center;
             background-color: white;
-            z-index: 2;
+            z-index: 1;
             padding: 0.15rem;
 
             .name {
                 font-size: 15px;
                 font-weight: 600;
                 color: black;
+                text-align: center;
             }
 
             .title {
