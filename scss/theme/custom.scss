@@ -366,9 +366,21 @@ section#news {
             // flex: 1;
             display: flex;
             justify-content: center;
-            
+
             .topic-container {
                 width: 90%;
+            }
+
+            .topic-container.old-topic-container {
+                width: 100%;
+
+                .image-container {
+                    height: 200px;
+                }
+
+                .topic-title-container {
+                    bottom: 10%;
+                }
             }
         }
 

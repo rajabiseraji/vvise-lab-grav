@@ -42,8 +42,8 @@
                     <div id="old-topic-list" class="columns">
                         {% for topic in page.children %}
                             {% if topic.header.hidden %}
-                                <div class="topic-item">
-                                    <div class="topic-container">
+                                <div class="topic-item col-12">
+                                    <div class="topic-container old-topic-container">
                                         <div class="image-container">
                                             {% set var = topic.header.title %}
                                             <a href="{{ uri.url(false) ~ '/' ~ topic.slug() }}">
