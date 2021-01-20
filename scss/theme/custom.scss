@@ -647,7 +647,13 @@ section#news {
         display: flex;
         justify-content: flex-end;
         margin-bottom: 2rem;
+        
+        
+        @media screen and (max-width: 840px) {
+            flex-wrap: wrap;
+        }
     }
+
 
     .intro-img {
         float: right;
@@ -670,6 +676,25 @@ section#news {
             color: $title-color;
             z-index: 1;
             position: relative
+        }
+
+        @media screen and (max-width: 840px) {
+            display: none;
+        }
+    }
+
+    .intro-text-mobile {
+        flex: 1;
+
+        .highlighted-text {
+            .vvise {
+                font-size: 3rem;
+                width: 100%;
+                text-align: center;
+            }
+        }
+        @media screen and (min-width: 841px) {
+            display: none;
         }
     }
 
