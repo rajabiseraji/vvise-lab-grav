@@ -2,7 +2,7 @@
 <div id="topic-list" class="columns">
 	{% for topic in page.children %}
         {% if not topic.header.hidden %}
-            <div class="topic-item">
+            <div class="topic-item col-sm-6 col-md-4 col-3">
                 <div class="topic-container">
                     <div class="image-container">
                         {% set var = topic.title %}
