@@ -39,15 +39,37 @@
                             {% endif %}
                         </div>
                     </div>
-                    
                 </div>
             </section>
+            <div class="intro-text-mobile">
+                <div class="highlighted-text title">
+                    <div class="name">
+                        {{page.title}}
+                    </div>
+                    <div class="affiliation">
+                        <p>
+                            {% for affiliation in affiliations %}
+                                {{ affiliation.title }}
+                                {% if not loop.last %},<br>
+                                {% endif %}
+                            {% endfor %}
+                        </p>
+                    </div>
+                    {% if page.header.email %}
+                        <div class="affiliation">
+                            <a href="{{ 'mailto:' ~ page.header.email }}">
+                                {{ page.header.email }}
+                            </a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
         </div>
     {% endblock intro %}
 
         <div class="columns person-text-parent">
             <section class="person-text column columns col-11">
-                <div id="left-column" class="column col-6">
+                <div id="left-column" class="column col-sm-12 col-6">
                     <section id="conference" class="columns">
                         <div class="column col-4">
                             <h3>Research Interests</h3>
@@ -79,7 +101,7 @@
                     {% endif %}
                     
                 </div>
-                <div id="right-column" class="column col-6">
+                <div id="right-column" class="column col-sm-12 col-6">
                     <section id="defences" class="columns">
                         <div class="column col-4">
                             <h3>About</h3>

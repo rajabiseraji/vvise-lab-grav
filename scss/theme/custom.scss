@@ -808,6 +808,24 @@ section#news {
         display: flex;
         align-items: center;
         justify-content: center;
+
+         @media screen and (max-width: 840px) {
+             flex-wrap: wrap;
+         }
+    }
+
+    .intro-text-mobile {
+        .name {
+            font-size: 3rem;
+            text-align: center;
+        }
+
+        .affiliation { 
+            position: relative;
+            text-align: center;
+            top: unset;
+            width: 100%;
+        }
     }
 
     .intro-img {
