@@ -516,6 +516,11 @@ section#news {
         padding-left: 0;
         padding-right: 0;
 
+        @media screen and (max-width: 840px) {
+            padding-right: 1rem;
+            padding-left: 1rem;
+        }
+
         summary {
             display: flex;
             align-items: center;
@@ -614,6 +619,13 @@ section#news {
 
     .partial-column:not(:first-child) {
         padding-left: 1rem;
+
+    }
+
+    @media screen and (max-width: 840px) {
+        .partial-column {
+            padding-left: 1rem;
+        }
     }
 
     .partial-column {

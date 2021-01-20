@@ -1,10 +1,10 @@
 
 
-<div class="column col{{ column_width ? '-' ~ column_width : '' }} {{ column_width < 12 ? 'partial-column' : '' }}">
+<div class="column col-sm-12 col{{ column_width ? '-' ~ column_width : '' }} {{ column_width < 12 ? 'partial-column' : '' }}">
 	{{ dump(page_contents) }}
 	<div class="columns {{ (img_position == 'left' or img_position == 'top') ? ('reverse ' ~ img_position) : (' ' ~ img_position)  }}">
 		{% if title or text %}
-			<div class="column col{{ (img_col_width < 12) ? '-' ~ (12 - img_col_width) : '-12' }} column-text-items">
+			<div class="column col-sm-12 col{{ (img_col_width < 12) ? '-' ~ (12 - img_col_width) : '-12' }} column-text-items">
 				{% if title %}
 					<h2 id="title-{{title|replace({' ': ''})|replace({'&': 'n'})}}" class="content-title">
 						{{title}}
@@ -51,7 +51,7 @@
 		{% endif %}
 		
 		{% if has_img %}
-			<div class="column col{{ img_col_width ? '-' ~ img_col_width : '12' }} column-img-items">
+			<div class="column col-sm-12 col{{ img_col_width ? '-' ~ img_col_width : '12' }} column-img-items">
 				{# <div class="with-top-space user-interfaces"> #}
 					<img class="main-img" src="{{ page.url() ~ '/' ~ img }}"/>
 				{# </div> #}
