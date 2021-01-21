@@ -71,10 +71,10 @@
             <section class="person-text column columns col-11">
                 <div id="left-column" class="column col-sm-12 col-6">
                     <section id="conference" class="columns">
-                        <div class="column col-4">
+                        <div class="column col-sm-12 col-md-4">
                             <h3>Research Interests</h3>
                         </div>
-                        <div class="column col-8">
+                        <div class="column col-sm-12 col-md-8">
                             {% for interest in interests %}
                                 <div class="news-list-item">
                                     {{ interest.interest }}{% if not loop.last %};{% endif %}
@@ -85,10 +85,10 @@
                     </section>
                     {% if page.children.count > 0 %}
                         <section id="conference" class="columns mt-2 pt-2">
-                            <div class="column col-4">
+                            <div class="column col-sm-12 col-md-4">
                                 <h3>More Information</h3>
                             </div>
-                            <div class="column col-8">
+                            <div class="column col-sm-12 col-md-8">
                                 {% for p in page.children %}
                                     <div class="news-list-item">
                                         <a href="{{ p.url }}">
@@ -103,10 +103,10 @@
                 </div>
                 <div id="right-column" class="column col-sm-12 col-6">
                     <section id="defences" class="columns">
-                        <div class="column col-4">
+                        <div class="column col-sm-12 col-md-4">
                             <h3>About</h3>
                         </div>
-                        <div class="column col-8">
+                        <div class="column col-sm-12 col-md-8">
                             <section class="defence-year-item">
                                 {{contents[0]}}
                             </section>

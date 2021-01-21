@@ -505,6 +505,11 @@ section#news {
         text-align: center;
         margin: 1rem auto 2rem auto;
         max-width: 400px;
+
+        @media screen and (max-width: 840px) {
+            padding-right: 1rem;
+            padding-left: 1rem;
+        }
     }
 
     .content-title {
@@ -822,6 +827,12 @@ section#news {
 // Person page
 .person-container {
     @extend .people-container;
+
+    @media screen and (max-width: 600px) {
+        #defences, #conference {
+            margin-bottom: 1.5rem;
+        }
+    }
 
     .intro {
         margin-top: 2rem;
