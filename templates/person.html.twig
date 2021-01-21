@@ -49,9 +49,7 @@
                     <div class="affiliation">
                         <p>
                             {% for affiliation in affiliations %}
-                                {{ affiliation.title }}
-                                {% if not loop.last %},<br>
-                                {% endif %}
+                                {{ affiliation.title }}{% if not loop.last %},<br>{% endif %}
                             {% endfor %}
                         </p>
                     </div>
