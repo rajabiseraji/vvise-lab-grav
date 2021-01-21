@@ -39,8 +39,8 @@
   }
 
   .button_container {
-    position: absolute;
-    top: 1.3rem;
+    position: fixed;
+    top: 0.8rem;
     right: $horiz-padding;
     height: $mobile-button-height;
     width: $mobile-button-width;

@@ -27,6 +27,14 @@
     
 }
 
+#body-wrapper {
+    .container {
+        @media screen and (max-width: 840px) {
+            padding: 1rem;
+        }
+    }
+}
+
 .columns{
     margin-right: 0;
     margin-left: 0;
@@ -85,7 +93,7 @@ nav * {
     .downArrow {
         position: absolute;
         bottom: 10%;
-        left: 50vw;
+        // left: 50vw;
         cursor: pointer;
     }
 
