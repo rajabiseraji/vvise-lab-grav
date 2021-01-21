@@ -873,6 +873,10 @@ section#news {
             // width: 100%;
             // object-fit: cover;
             // object-position: top;
+
+            @media screen and (max-width: 840px) {
+                object-fit: cover;
+            }
         }
     }
 
