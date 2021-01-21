@@ -788,6 +788,9 @@ section#news {
             width: 130%;
             object-fit: cover;
             transition: 0.2s ease-in-out;
+            // Added to fix the aspect ratio problem
+            height: 250px;
+            // fin
 
             &:hover {
                 transition: 0.2s ease-in-out;
