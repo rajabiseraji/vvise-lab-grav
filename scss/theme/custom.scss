@@ -683,7 +683,13 @@ section#news {
     .intro-img {
         float: right;
 
-        
+        @media screen and (max-width: 840px) {
+            width: 100%;
+            img { 
+                width: 100%;
+            }
+        }
+            
     }
 
     .intro-text {
