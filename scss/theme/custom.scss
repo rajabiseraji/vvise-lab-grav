@@ -795,6 +795,7 @@ section#news {
             height: 130%;
             width: 130%;
             object-fit: cover;
+            object-position: top;
             transition: 0.2s ease-in-out;
             // Added to fix the aspect ratio problem
             height: 250px;
