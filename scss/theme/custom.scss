@@ -389,6 +389,15 @@ section#news {
                 .topic-title-container {
                     bottom: 10%;
                 }
+
+                .topic-image {
+                    filter: brightness(60%);
+
+                    &:hover {
+                        transition: 0.2s ease-in-out;
+                        filter: brightness(50%);
+                    }
+                }
             }
         }
 
