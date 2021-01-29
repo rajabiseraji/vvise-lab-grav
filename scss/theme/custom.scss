@@ -62,6 +62,11 @@ nav * {
         #contact-text {
             order: 1;
             margin-bottom: 0.5rem;
+
+            @media screen and (max-width: 840px) {
+                padding-right: 0.5rem;
+                padding-left: 1rem;
+            }
         }
         #contact-map {
             order: 2;
