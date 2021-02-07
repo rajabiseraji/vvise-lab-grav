@@ -307,7 +307,11 @@ section#news {
     }
 
     .defence-year-item {
-    
+        
+        &:not(:first-child) {
+            margin-top: 1rem;
+        }
+
         .defence-year-label {
             font-size: 14px;
             font-weight: 500;
