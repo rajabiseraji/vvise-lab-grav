@@ -82,7 +82,7 @@ name="description" content="{{page.header.abstract}}">
 				</section>
 				
 				<section id="paper-data">
-					{% if page.header.abstract != "" %}
+					{% if page.header.abstract != "" and page.header.abstract != "undefined" %}
 						<div class="abstract">
 							<h4>
 								Abstract:
