@@ -1,0 +1,129 @@
+title: 'Single Publication'
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        highlights:
+          type: tab
+          title: 'Items'
+          fields:
+            header.top_img:
+              name: top_img
+              type: filepicker
+              label: Header Image
+              description: 'The image that is shown on the top of the page'
+              preview_images: true
+              accept:
+                - .png
+                - .jpg
+
+            header.hidden:
+              name: hidden
+              type: toggle
+              label: Has a thumbnail in research projects page
+              default: 0
+              description: If True, there would be a thumbnail for this page in research projects page
+              options:
+                1: 'True'
+                0: 'False'
+              validate:
+                type: bool
+                required: true
+                    
+            header.rows:
+              name: rows
+              type: list
+              label: Rows
+              style: vertical
+
+              fields:
+                .columns:
+                  name: columns
+                  type: list
+                  label: Columns
+                  style: vertical
+                   
+                  fields: 
+                    .title:
+                      type: text
+                      label: 'Section Title'
+                    .text:
+                      type: editor
+                      label: 'Section Text'
+                    .img: 
+                      type: filepicker
+                      folder: '@self'
+                      label: Image File
+                      description: 'Pick and image from the existing page media. For new images, upload it in the media of the page and then select it from here'
+                      preview_images: true
+                      accept:
+                        - .png
+                        - .jpg
+                    .column_width: 
+                      type: select
+                      label: 'Column Width'
+                      description: 'What portion of the row does this column occupy'
+                      default: 12
+                      options: 
+                        12: 'Fill the Row Width'
+                        6: 'Half the Row Width'
+                        4: 'A Third of the Row Width'
+                      validate:
+                        required: true 
+                    .img_col_width: 
+                      type: select
+                      label: 'Image Width'
+                      description: 'What portion of this column belongs to its image'
+                      default: 12
+                      options: 
+                        12: 'Fill column'
+                        6: 'Half of the column'
+                        4: 'A Third of the column' 
+                      validate:
+                        required: true 
+                    .has_img:
+                      type: toggle
+                      label: Has Image
+                      default: 0
+                      options:
+                        1: 'True'
+                        0: 'False'
+                      validate:
+                        required: true
+                        type: bool
+                    .with_top_space:
+                      type: toggle
+                      label: Extra space above paragraph
+                      default: 0
+                      options:
+                        1: 'True'
+                        0: 'False'
+                      validate:
+                        type: bool
+                        required: true
+                    .img_position: 
+                      type: radio
+                      label: Image position
+                      default: bottom
+                      options:
+                          bottom: Bottom
+                          top: Top
+                          left: Left
+                          right: Right
+                    .has_publications:
+                      type: toggle
+                      label: Has publications popup
+                      description: If true, there would be a bibtex modal entry on that column
+                      default: 0
+                      options:
+                        1: 'True'
+                        0: 'False'
+                      validate:
+                        type: bool
+
+                    
+
+                
+                  

@@ -1,0 +1,134 @@
+{% extends 'partials/base.html.twig' %}
+{% set grid_size = theme_var('grid-size') %}
+{% set publishedDate = (page.header.month ~ ' ' ~ page.header.year)|date('c') %}
+
+
+{% set inlineJs = '{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline":"' ~ page.header.title ~'",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "url": "'~ page.permalink ~ '"
+    },
+    "articleBody": "' ~ page.content ~'",
+    "datePublished": "' ~ publishedDate ~'",
+    "dateModified": "' ~ publishedDate ~'",
+    "description": "' ~ page.header.abstract ~ '",
+    "author": "' ~ page.header.author ~ '",
+}' %}
+
+
+{% block head deferred %}
+<!-- Primary Meta Tags -->
+<meta name="title" content="{{page.header.title}}">
+<meta
+name="description" content="{{page.content}}">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{page.permalink}}">
+<meta property="og:title" content="{{ page.header.title }}">
+<meta property="og:description" content="{{page.content}}">
+{% if page.media['main.png'] %}
+<meta property="og:image" content="{{topic.media['main.png'].url|e}}">
+{% endif %}
+
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="{{page.permalink}}">
+<meta property="twitter:title" content="{{ page.header.title }}">
+<meta property="twitter:description" content="{{page.content}}">
+<meta property="twitter:image" content="{{topic.media['main.png'].url|e}}">
+
+{% endblock %}
+
+{% block javascripts %}
+{% do assets.addInlineJs(inlineJs, {'priority':102, 'type': 'application/ld+json'}) %}
+
+
+{% endblock %}
+
+{% block body %}
+	<section id="body-wrapper" class="single-publication-page">
+		<section class="container {{ grid_size }} p-relative">
+
+			{% block intro %}
+				<section id="intro">
+					<h1 class="intro-title">
+						{# we need to strip the title and other texts of any {}  #}
+						{{ page.header.title }}
+					</h1>
+					<div class="intro-second-line">
+						{# <h4 class="type mr-2">
+							{{ page.header.entryType|capitalize  }}
+						</h4> #}
+						<h4 class="publisher mr-2">
+							<strong>
+								 Publisher:
+							</strong> 
+							{{ page.header.publisher }}
+						</h4>
+						{% if page.header.pdf %}
+							<a href="{{ '/user/data/' ~ page.header.pdf }}" class="get-pdf-button btn">
+								Get PDF
+							</a>
+						{% endif %}
+						
+					</div>
+					<h4 class="authors">
+						{{ page.header.author }}
+					</h4>
+
+					{% block mainimg %}
+						<img class="main-img pt-2" src="{{ topic.media['main.png'].url|e }}" alt="{{ topic.title }}"/>
+					{% endblock mainimg %}
+				</section>
+				
+				<section id="paper-data">
+					<div class="abstract">
+						<h4>
+							Abstract:
+						</h4>
+						<p class="abstract-text">
+							{{ page.header.abstract }}
+						</p>
+					</div>
+				</section>
+
+				<section id="paper-meta-data">
+					<div class="date">
+						<strong>
+							Date of publication: 
+						</strong>
+						{{ page.header.month }} - {{ page.header.year }}
+					</div>
+					<div class="keywords">
+						<strong>
+							Keywords:
+						</strong>
+						{{ page.header.keywords }}
+					</div>
+					{% if page.header.doi %}
+						<div class="doi">
+							<strong>
+								DOI: 
+							</strong>
+							<a href="{{ page.header.doi }}">
+								{{ page.header.doi }}
+							</a>
+						</div>
+					{% endif %}
+					
+				</section>
+				{{
+					page.content
+				}}
+			{% endblock intro %}
+
+		</section>
+
+	</section>
+
+{% endblock %}

@@ -1119,3 +1119,36 @@ section#news {
     height: 18px;
     margin-top: 1rem;
 }
+
+
+// Single Publication Page
+#body-wrapper.single-publication-page {
+    .container {
+        @media screen and (max-width: 840px) {
+            padding: 1rem;
+        }
+    }
+}
+
+
+.single-publication-page {
+    @extend .open-positions-container;
+    .publisher, .type {
+        margin-top: 0;
+        display: inline-block;
+    }
+
+    .intro-title {
+        margin-bottom: 0;
+    }
+
+    .intro-second-line {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .publisher {
+        margin: 0;
+    }
+}
