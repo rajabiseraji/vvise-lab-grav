@@ -58,7 +58,7 @@ name="description" content="{{page.content}}">
 				<section id="intro">
 					<h1 class="intro-title">
 						{# we need to strip the title and other texts of any {}  #}
-						{{ page.header.title }}
+						{{ page.header.title }} <span class="entry-type btn disabled">{{ page.header.entryType|capitalize  }}</span>
 					</h1>
 					<div class="intro-second-line">
 						{# <h4 class="type mr-2">
@@ -68,13 +68,9 @@ name="description" content="{{page.content}}">
 							<strong>
 								 Publisher:
 							</strong> 
-							{{ page.header.publisher }}
+							{{ page.header.publisher != 'undefined' ? page.header.publisher : 'pending...'  }}
 						</h4>
-						{% if page.header.pdf %}
-							<a href="{{ '/user/data/' ~ page.header.pdf }}" class="get-pdf-button btn">
-								Get PDF
-							</a>
-						{% endif %}
+						
 						
 					</div>
 					<h4 class="authors">
@@ -87,14 +83,17 @@ name="description" content="{{page.content}}">
 				</section>
 				
 				<section id="paper-data">
-					<div class="abstract">
-						<h4>
-							Abstract:
-						</h4>
-						<p class="abstract-text">
-							{{ page.header.abstract }}
-						</p>
-					</div>
+					{% if page.header.abstract != "" %}
+						<div class="abstract">
+							<h4>
+								Abstract:
+							</h4>
+							<p class="abstract-text">
+								{{ page.header.abstract }}
+							</p>
+						</div>
+					{% endif %}
+					
 				</section>
 
 				<section id="paper-meta-data">
@@ -120,7 +119,21 @@ name="description" content="{{page.content}}">
 							</a>
 						</div>
 					{% endif %}
-					
+					{% if page.header.url %}
+						<div class="url">
+							<strong>
+								URL: 
+							</strong>
+							<a href="{{ page.header.url }}">
+								{{ page.header.url }}
+							</a>
+						</div>
+					{% endif %}
+					{% if page.header.pdf %}
+						<a href="{{ '/user/data/' ~ page.header.pdf }}" class="get-pdf-button btn">
+							Get PDF
+						</a>
+					{% endif %}
 				</section>
 				{{
 					page.content

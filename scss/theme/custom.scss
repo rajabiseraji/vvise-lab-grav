@@ -1148,7 +1148,16 @@ section#news {
         align-items: center;
     }
 
+    .entry-type { 
+        font-size: 0.5rem;
+        display: inline;
+    }
+
     .publisher {
         margin: 0;
+    }
+
+    .get-pdf-button {
+        margin-top: 1rem;
     }
 }
