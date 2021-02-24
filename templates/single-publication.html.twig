@@ -11,7 +11,7 @@
         "@type": "WebPage",
         "url": "'~ page.permalink ~ '"
     },
-    "articleBody": "' ~ page.content ~'",
+    "articleBody": "' ~ page.header.abstract ~'",
     "datePublished": "' ~ publishedDate ~'",
     "dateModified": "' ~ publishedDate ~'",
     "description": "' ~ page.header.abstract ~ '",
@@ -23,13 +23,13 @@
 <!-- Primary Meta Tags -->
 <meta name="title" content="{{page.header.title}}">
 <meta
-name="description" content="{{page.content}}">
+name="description" content="{{page.header.abstract}}">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{page.permalink}}">
 <meta property="og:title" content="{{ page.header.title }}">
-<meta property="og:description" content="{{page.content}}">
+<meta property="og:description" content="{{page.header.abstract}}">
 {% if page.media['main.png'] %}
 <meta property="og:image" content="{{topic.media['main.png'].url|e}}">
 {% endif %}
@@ -39,7 +39,7 @@ name="description" content="{{page.content}}">
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="{{page.permalink}}">
 <meta property="twitter:title" content="{{ page.header.title }}">
-<meta property="twitter:description" content="{{page.content}}">
+<meta property="twitter:description" content="{{page.header.abstract}}">
 <meta property="twitter:image" content="{{topic.media['main.png'].url|e}}">
 
 {% endblock %}
@@ -64,18 +64,17 @@ name="description" content="{{page.content}}">
 						{# <h4 class="type mr-2">
 							{{ page.header.entryType|capitalize  }}
 						</h4> #}
-						<h4 class="publisher mr-2">
-							<strong>
-								 Publisher:
-							</strong> 
-							{{ page.header.publisher != 'undefined' ? page.header.publisher : 'pending...'  }}
+						<h4 class="authors">
+							{{ page.header.author }}
 						</h4>
 						
-						
 					</div>
-					<h4 class="authors">
-						{{ page.header.author }}
-					</h4>
+					<h5 class="publisher mr-2">
+						<strong>
+								Publisher:
+						</strong> 
+						{{ page.header.publisher != 'undefined' ? page.header.publisher : 'pending...'  }}
+					</h5>
 
 					{% block mainimg %}
 						<img class="main-img pt-2" src="{{ topic.media['main.png'].url|e }}" alt="{{ topic.title }}"/>
