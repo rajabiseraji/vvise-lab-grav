@@ -1165,4 +1165,24 @@ section#news {
         font-size: 1rem;
         margin-top: 0;
     }
+
+    .image-container {
+        padding: none;
+        text-align: center;
+        position: relative;
+        height: 500px;
+    }
+
+    .blurred-bg {
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+    }
+
+    .main-img {
+        // padding-top: 0;
+    }
 }

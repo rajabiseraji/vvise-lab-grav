@@ -1,6 +1,8 @@
 {% extends 'partials/base.html.twig' %}
 {% set grid_size = theme_var('grid-size') %}
 {% set publishedDate = (page.header.month ~ ' ' ~ page.header.year)|date('c') %}
+{% set imagePath = page.header.teaser ? ('user://data/' ~ page.header.teaser) : '' %}
+{% set thumbnailPath = page.header.thumbnail ? ('user://data/' ~ page.header.thumbnail) : '' %}
 
 
 {% set inlineJs = '{
@@ -56,6 +58,17 @@ name="description" content="{{page.header.abstract}}">
 
 			{% block intro %}
 				<section id="intro">
+					
+					{% block mainimg %}
+						{% if page.header.teaser %}
+							<div class="image-container"  >
+								<div class="blurred-bg" style="background-image: url({{ media[thumbnailPath].url|e }});"></div>
+
+								<img class="main-img" src="{{ media[imagePath].url|e }}" alt="{{ page.header.title }}"/>
+							</div>
+						{% endif %}
+					{% endblock mainimg %}
+
 					<h1 class="intro-title">
 						{# we need to strip the title and other texts of any {}  #}
 						{{ page.header.title }} <span class="entry-type btn disabled">{{ page.header.entryType|capitalize  }}</span>
@@ -76,9 +89,6 @@ name="description" content="{{page.header.abstract}}">
 						{{ page.header.publisher != 'undefined' ? page.header.publisher : 'pending...'  }}
 					</h5>
 
-					{% block mainimg %}
-						<img class="main-img pt-2" src="{{ topic.media['main.png'].url|e }}" alt="{{ topic.title }}"/>
-					{% endblock mainimg %}
 				</section>
 				
 				<section id="paper-data">
