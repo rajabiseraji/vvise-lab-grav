@@ -82,12 +82,6 @@ name="description" content="{{page.header.abstract}}">
 						</h4>
 						
 					</div>
-					<h5 class="publisher mr-2">
-						<strong>
-								Publisher:
-						</strong> 
-						{{ page.header.publisher != 'undefined' ? page.header.publisher : 'pending...'  }}
-					</h5>
 
 				</section>
 				
@@ -117,6 +111,12 @@ name="description" content="{{page.header.abstract}}">
 							Keywords:
 						</strong>
 						{{ page.header.keywords }}
+					</div>
+					<div class="publisher">
+						<strong>
+							Publisher:
+						</strong>
+						{{ page.header.publisher != 'undefined' ? page.header.publisher : 'pending...'  }}
 					</div>
 					{% if page.header.doi %}
 						<div class="doi">
