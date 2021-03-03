@@ -1187,9 +1187,13 @@ section#news {
         height: 100%;
     }
 
+    .bibtex-panel {
+        margin-top: 3rem;
+    }
+
     .bibtex-entry {
         background-color: whitesmoke;
-        padding: 1rem;
+        padding: 3rem;
          white-space: pre-wrap;
          /* css-3 */
          white-space: -moz-pre-wrap;

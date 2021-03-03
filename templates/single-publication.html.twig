@@ -164,11 +164,14 @@ name="description" content="{{page.header.abstract}}">
 						</div>
 					{% endif %}
 				</section>
-				<pre class="bibtex-entry mt-3">
-					{{
-						page.content|raw
-					}}
-				</pre>
+				<section class="bibtex-panel">
+					<h4>Bibtex Entry</h4>
+					<pre class="bibtex-entry mt-3">
+						{{
+							page.content|raw
+						}}
+					</pre>
+				</section>
 
 			{% endblock intro %}
 
