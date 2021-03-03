@@ -1,6 +1,6 @@
 {% extends 'partials/base.html.twig' %}
 {% set grid_size = theme_var('grid-size') %}
-{% set publishedDate = (page.header.month ~ ' ' ~ page.header.year)|date('c') %}
+{% set publishedDate = page.header.month ? (page.header.month ~ ' ' ~ page.header.year)|date('c') : '' %}
 {% set imagePath = page.header.teaser ? ('user://data/' ~ page.header.teaser) : '' %}
 {% set thumbnailPath = page.header.thumbnail ? ('user://data/' ~ page.header.thumbnail) : '' %}
 
