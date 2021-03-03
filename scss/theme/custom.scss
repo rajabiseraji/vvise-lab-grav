@@ -1186,4 +1186,25 @@ section#news {
         // padding-top: 0;
         height: 100%;
     }
+
+    .bibtex-entry {
+        background-color: whitesmoke;
+        padding: 1rem;
+         white-space: pre-wrap;
+         /* css-3 */
+         white-space: -moz-pre-wrap;
+         /* Mozilla, since 1999 */
+         white-space: -pre-wrap;
+         /* Opera 4-6 */
+         white-space: -o-pre-wrap;
+         /* Opera 7 */
+         word-wrap: break-word;
+         /* Internet Explorer 5.5+ */
+
+        p {
+            font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
+            font-size: 0.7rem;
+        }
+    }
+
 }

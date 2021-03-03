@@ -139,14 +139,19 @@ name="description" content="{{page.header.abstract}}">
 						</div>
 					{% endif %}
 					{% if page.header.pdf %}
-						<a href="{{ '/user/data/' ~ page.header.pdf }}" class="get-pdf-button btn">
-							Get PDF
-						</a>
+						<div class="pdf-container">
+							<a href="{{ '/user/data/' ~ page.header.pdf }}" class="get-pdf-button btn">
+								Get PDF
+							</a>
+						</div>
 					{% endif %}
 				</section>
-				{{
-					page.content
-				}}
+				<pre class="bibtex-entry mt-3">
+					{{
+						page.content|raw
+					}}
+				</pre>
+
 			{% endblock intro %}
 
 		</section>
