@@ -22,6 +22,24 @@
 
 
 {% block head deferred %}
+<meta charset="utf-8"/>
+<title>
+	{% if page.title %}
+		{{ page.title|e('html') }}
+		|
+	{% endif %}
+	VVISE Lab
+</title>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+{% include 'partials/metadata.html.twig' %}
+
+<link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}"/>
+<link rel="canonical" href="{{ page.url(true, true) }}"/>
+
+
 <!-- Primary Meta Tags -->
 <meta name="title" content="{{page.header.title}}">
 <meta
