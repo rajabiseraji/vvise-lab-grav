@@ -1187,13 +1187,15 @@ section#news {
         height: 100%;
     }
 
-    .bibtex-panel {
-        margin-top: 3rem;
-    }
+    .interactive-buttons {
+        margin-top: 1rem;
+    };
 
     .bibtex-entry {
         background-color: whitesmoke;
         padding: 3rem;
+        padding-top: 0;
+        padding-bottom: 0;
          white-space: pre-wrap;
          /* css-3 */
          white-space: -moz-pre-wrap;
@@ -1205,9 +1207,15 @@ section#news {
          word-wrap: break-word;
          /* Internet Explorer 5.5+ */
 
+        pre {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
         p {
             font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
             font-size: 0.7rem;
+            margin-bottom: 0;
         }
     }
 
