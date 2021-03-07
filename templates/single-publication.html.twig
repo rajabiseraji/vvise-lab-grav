@@ -157,15 +157,13 @@ name="description" content="{{page.header.abstract}}">
 							</a>
 						</div>
 					{% endif %}
-					{% if page.header.pdf %}
-						<div class="pdf-container">
-							<a href="{{ '/user/data/' ~ page.header.pdf }}" class="get-pdf-button btn">
-								Get PDF
-							</a>
-						</div>
-					{% endif %}
 				</section>
 				<section class="interactive-buttons mt-3">
+					{% if page.header.pdf %}
+					<a href="{{ '/user/data/' ~ page.header.pdf }}" class="get-pdf-button btn btn-success">
+						Get PDF
+					</a>
+					{% endif %}
 					<a href="/publications?search={{page.header.citationKey}}" class="btn btn-success chevron-down-button">
 						Get Citation
 					</a>
