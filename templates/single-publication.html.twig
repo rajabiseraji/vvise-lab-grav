@@ -147,6 +147,16 @@ name="description" content="{{page.header.abstract}}">
 							</a>
 						</div>
 					{% endif %}
+					{% if page.header.award %}
+						<div class="award">
+							<strong>
+								Awards: 
+							</strong>
+							<a href="{{ page.header.award }}">
+								{{ page.header.award }}
+							</a>
+						</div>
+					{% endif %}
 					{% if page.header.url %}
 						<div class="url">
 							<strong>
