@@ -99,4 +99,8 @@ body, html {
     font-weight: 400;
 }
 
+.modal-body .bibtable.dataTable.display.no-footer {
+    width: 100%;
+}
+
 
