@@ -42,8 +42,7 @@
 
 <!-- Primary Meta Tags -->
 <meta name="title" content="{{page.header.title}}">
-<meta
-name="description" content="{{page.header.abstract}}">
+<meta name="description" content="{{page.header.abstract}}">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
@@ -150,9 +149,17 @@ name="description" content="{{page.header.abstract}}">
 					{% if page.header.award %}
 						<div class="award">
 							<strong>
-								Awards: 
+								Award: 
 							</strong>
 							{{ page.header.award }}
+						</div>
+					{% endif %}
+					{% if page.header.footnote %}
+						<div class="footnote">
+							<strong>
+								Footnote: 
+							</strong>
+							{{ page.header.footnote }}
 						</div>
 					{% endif %}
 					{% if page.header.url %}
