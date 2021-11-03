@@ -60,7 +60,7 @@ jQuery(document).ready(function($){
 
     // Responsive Menu
     $('.modal-opener').click(function () {
-        console.log('hello world!');
+        //console.log('hello world!');
         var modalID = $(this).attr('data-modal');
         var searchQuery = '#' + modalID;
         $('#' + modalID).toggleClass('active'); 
@@ -73,6 +73,8 @@ jQuery(document).ready(function($){
     $('.modal-close-btn').click(function () {
        $('.modal').removeClass('active'); 
     });
+
+    $('.modal-body .display.bibtable.dataTable.no-footer').css('width', '100%');
 
 
     // Scrolling
