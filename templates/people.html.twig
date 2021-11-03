@@ -2,6 +2,7 @@
 {% set grid_size = theme_var('grid-size') %}
 {% set people = page.children.visibile %}
 {% set page_text_items = page.header.page_items.items %}
+{% set alumni_text_items = page.header.alumni_text.items %}
 
 
 {% block body %}
@@ -70,7 +71,26 @@
                     {% include "partials/people-image.html.twig" with people %}
                 </div>
             </section>
-
+            <section class="member-text columns">
+                <div class="column columns col-md-11 col-10">
+                    {% for item in alumni_text_items %}
+						<div class="columns">
+							<div class="column col-12">
+								<h2 class="title">
+									<a href="{{ uri.url(false) ~ '/alumni'  }}">
+										{{ item.title }}
+									</a>
+								</h2>
+							</div>
+							<div class="column col-12">
+								<p class="text">
+									{{ item.desc }}
+								</p>
+							</div>
+						</div>
+                    {% endfor %}
+                </div>
+            </section>
             
         </section>
     </section>
