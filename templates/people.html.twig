@@ -73,22 +73,21 @@
             </section>
             <section class="member-text columns">
                 <div class="column columns col-md-11 col-10">
-                    {% for item in alumni_text_items %}
-						<div class="columns">
-							<div class="column col-12">
-								<h2 class="title">
-									<a href="{{ uri.url(false) ~ '/alumni'  }}">
-										{{ item.title }}
-									</a>
-								</h2>
-							</div>
-							<div class="column col-12">
-								<p class="text">
-									{{ item.desc }}
-								</p>
-							</div>
-						</div>
-                    {% endfor %}
+                    <div class="columns">
+                        <div class="column col-12">
+                            <h2 class="title">
+                                Alumni
+                                <a href="{{ uri.url(false) ~ '/alumni'  }}">
+                                    {{ item.title }}
+                                </a>
+                            </h2>
+                        </div>
+                        <div class="column col-12">
+                            <p class="text">
+                                For a list of people who have worked in the lab previously, please see the <a alt="Alumni Page" href="{{ uri.url(false) ~ '/alumni'  }}">Alumni page</a>.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
             
